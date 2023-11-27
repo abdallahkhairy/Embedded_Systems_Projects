@@ -1,0 +1,23 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F431 `(v ~T0 @X0 0 tf ]
+"54 AECUL_Modules/TempSensor_TC74/../../mcc_generated_files/examples/i2c_master_example.h
+[; ;AECUL_Modules/TempSensor_TC74/../../mcc_generated_files/examples/i2c_master_example.h: 54: uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
+[v _I2C_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
+"213 AECUL_Modules/TempSensor_TC74/../../mcc_generated_files/examples/../i2c_master.h
+[; ;AECUL_Modules/TempSensor_TC74/../../mcc_generated_files/examples/../i2c_master.h: 213: void (*MSSP_InterruptHandler)(void);
+[v _MSSP_InterruptHandler `*F431 ~T0 @X0 1 e ]
+"10 AECUL_Modules/TempSensor_TC74/TempSensor_TC74.c
+[; ;AECUL_Modules/TempSensor_TC74/TempSensor_TC74.c: 10: uint8_t TempSensor_TC74_Read_Temp(i2c_address_t TC74_Address){
+[v _TempSensor_TC74_Read_Temp `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _TempSensor_TC74_Read_Temp ]
+[v _TC74_Address `uc ~T0 @X0 1 r1 ]
+[f ]
+"11
+[; ;AECUL_Modules/TempSensor_TC74/TempSensor_TC74.c: 11:     return I2C_Read1ByteRegister(TC74_Address, 0x00);
+[e ) ( _I2C_Read1ByteRegister (2 , _TC74_Address -> -> 0 `i `uc ]
+[e $UE 3  ]
+"12
+[; ;AECUL_Modules/TempSensor_TC74/TempSensor_TC74.c: 12: }
+[e :UE 3 ]
+}

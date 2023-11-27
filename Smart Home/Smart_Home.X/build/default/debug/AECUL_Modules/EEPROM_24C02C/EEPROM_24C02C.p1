@@ -1,0 +1,43 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F431 `(v ~T0 @X0 0 tf ]
+"56 AECUL_Modules/EEPROM_24C02C/../../mcc_generated_files/examples/i2c_master_example.h
+[; ;AECUL_Modules/EEPROM_24C02C/../../mcc_generated_files/examples/i2c_master_example.h: 56: void I2C_Write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data);
+[v _I2C_Write1ByteRegister `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"54
+[; ;AECUL_Modules/EEPROM_24C02C/../../mcc_generated_files/examples/i2c_master_example.h: 54: uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
+[v _I2C_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
+"213 AECUL_Modules/EEPROM_24C02C/../../mcc_generated_files/examples/../i2c_master.h
+[; ;AECUL_Modules/EEPROM_24C02C/../../mcc_generated_files/examples/../i2c_master.h: 213: void (*MSSP_InterruptHandler)(void);
+[v _MSSP_InterruptHandler `*F431 ~T0 @X0 1 e ]
+"10 AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c
+[; ;AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c: 10: void EEPROM_24C02C_Write_Byte(i2c_address_t EEPROM_Address, i2c_address_t Byte_Address, uint8_t data){
+[v _EEPROM_24C02C_Write_Byte `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _EEPROM_24C02C_Write_Byte ]
+[v _EEPROM_Address `uc ~T0 @X0 1 r1 ]
+[v _Byte_Address `uc ~T0 @X0 1 r2 ]
+[v _data `uc ~T0 @X0 1 r3 ]
+[f ]
+"11
+[; ;AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c: 11:     I2C_Write1ByteRegister(EEPROM_Address, Byte_Address, data);
+[e ( _I2C_Write1ByteRegister (3 , , _EEPROM_Address _Byte_Address _data ]
+"12
+[; ;AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c: 12: }
+[e :UE 3 ]
+}
+"13
+[; ;AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c: 13: uint8_t EEPROM_24C02C_Read_Byte(i2c_address_t EEPROM_Address, i2c_address_t Byte_Address){
+[v _EEPROM_24C02C_Read_Byte `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _EEPROM_24C02C_Read_Byte ]
+[v _EEPROM_Address `uc ~T0 @X0 1 r1 ]
+[v _Byte_Address `uc ~T0 @X0 1 r2 ]
+[f ]
+"14
+[; ;AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c: 14:     return I2C_Read1ByteRegister(EEPROM_Address, Byte_Address);
+[e ) ( _I2C_Read1ByteRegister (2 , _EEPROM_Address _Byte_Address ]
+[e $UE 4  ]
+"15
+[; ;AECUL_Modules/EEPROM_24C02C/EEPROM_24C02C.c: 15: }
+[e :UE 4 ]
+}
