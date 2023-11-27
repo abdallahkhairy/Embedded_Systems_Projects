@@ -2,7 +2,7 @@
  * File:   ecu_chr_lcd.h
  * Author: Abdullah Khairy
  *
- * Created on February 9, 2021, 9:48 PM
+ * Created on February 9, 2023, 9:48 PM
  */
 
 #ifndef ECU_CHR_LCD_H

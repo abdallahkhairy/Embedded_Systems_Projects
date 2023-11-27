@@ -2,7 +2,7 @@
  * File:   mcal_interrupt_config.h
  * Author: Abdullah Khairy
  *
- * Created on February 14, 2021, 11:52 PM
+ * Created on February 14, 2023, 11:52 PM
  */
 
 #ifndef MCAL_INTERRUPT_CONFIG_H

@@ -1,8 +1,8 @@
 /* 
  * File:   hal_eeprom.h
- * Author: Ahmed Abd El-Ghafar
+ * Author: Abdullah Khairy
  *
- * Created on May 15, 2021, 11:09 PM
+ * Created on May 15, 2023, 11:09 PM
  */
 
 #ifndef HAL_EEPROM_H

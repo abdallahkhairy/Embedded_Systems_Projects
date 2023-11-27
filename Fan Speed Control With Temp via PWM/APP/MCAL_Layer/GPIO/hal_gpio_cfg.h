@@ -2,7 +2,7 @@
  * File:   hal_gpio_cfg.h
  * Author: Abdullah Khairy
  *
- * Created on December 10, 2020, 6:12 PM
+ * Created on December 10, 2022, 6:12 PM
  */
 
 #ifndef HAL_GPIO_CFG_H

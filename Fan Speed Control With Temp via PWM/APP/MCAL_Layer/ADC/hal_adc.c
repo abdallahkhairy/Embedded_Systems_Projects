@@ -1,8 +1,8 @@
 /* 
  * File:   hal_adc.c
- * Author: Ahmed Abd El-Ghafar
+ * Author: Abdullah Khairy
  *
- * Created on March 26, 2021, 7:21 PM
+ * Created on March 26, 2023, 7:21 PM
  */
 
 #include "hal_adc.h"

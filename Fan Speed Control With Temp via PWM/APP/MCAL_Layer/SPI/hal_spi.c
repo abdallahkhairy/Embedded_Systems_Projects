@@ -1,6 +1,6 @@
 /* 
  * File:   hal_spi.c
- * Author: Ahmed Abd El-Ghafar
+ * Author: Abdullah Khairy
  */
 
 #include "hal_spi.h"

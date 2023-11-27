@@ -2,7 +2,7 @@
  * File:   device_config.c
  * Author: Abdullah Khairy
  *
- * Created on November 28, 2020, 10:29 PM
+ * Created on November 28, 2022, 10:29 PM
  */
 
 #include "device_config.h"

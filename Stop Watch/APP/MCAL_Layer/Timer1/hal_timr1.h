@@ -1,8 +1,8 @@
 /* 
  * File:   hal_timr1.h
- * Author: Ahmed Abd El-Ghafar
+ * Author: Abdullah Khairy
  *
- * Created on May 12, 2021, 1:05 AM
+ * Created on May 12, 2023, 1:05 AM
  */
 
 #ifndef HAL_TIMR1_H

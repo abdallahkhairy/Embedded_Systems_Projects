@@ -1,8 +1,8 @@
 /* 
  * File:   ccp_cfg.h
- * Author: Ahmed Abd El-Ghafar
+ * Author: Abdullah Khairy
  *
- * Created on April 6, 2021, 8:53 PM
+ * Created on April 6, 2023, 8:53 PM
  */
 
 #ifndef CCP_CFG_H

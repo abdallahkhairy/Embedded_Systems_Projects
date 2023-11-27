@@ -1,6 +1,6 @@
 /*
  * File:   hal_usart.c
- * Author: Ahmed Abd El-Ghafar
+ * Author: Abdullah Khairy
  */
 
 #include "hal_usart.h"

@@ -2,7 +2,7 @@
  * File:   mcal_interrupt_manager.h
  * Author: Abdullah Khairy
  *
- * Created on February 14, 2021, 11:53 PM
+ * Created on February 14, 2023, 11:53 PM
  */
 
 #ifndef MCAL_INTERRUPT_MANAGER_H

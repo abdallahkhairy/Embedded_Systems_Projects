@@ -2,7 +2,7 @@
  * File:   mcal_interrupt_gen_cfg.h
  * Author: Abdullah Khairy
  *
- * Created on February 19, 2021, 11:28 PM
+ * Created on February 19, 2023, 11:28 PM
  */
 
 #ifndef MCAL_INTERRUPT_GEN_CFG_H

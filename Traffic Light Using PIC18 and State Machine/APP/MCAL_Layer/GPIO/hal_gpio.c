@@ -2,7 +2,7 @@
  * File:   hal_gpio.c
  * Author: Abdullah Khairy
  *
- * Created on November 28, 2020, 8:43 PM
+ * Created on November 28, 2022, 8:43 PM
  */
 
 #include "hal_gpio.h"

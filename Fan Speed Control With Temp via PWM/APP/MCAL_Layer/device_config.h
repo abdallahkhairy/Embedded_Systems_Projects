@@ -2,7 +2,7 @@
  * File:   device_config.h
  * Author: Abdullah Khairy
  *
- * Created on November 28, 2020, 10:29 PM
+ * Created on November 28, 2022, 10:29 PM
  */
 
 #ifndef DEVICE_CONFIG_H
