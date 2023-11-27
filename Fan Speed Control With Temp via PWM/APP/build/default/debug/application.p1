@@ -656,134 +656,154 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;application.c: 66:         ret = dc_motor_move_right(&dc_motor_1);
 [e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
 "67
-[; ;application.c: 67:       }
+[; ;application.c: 67:         ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 1");
+[e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 4 `i `uc :s 4C ]
+"68
+[; ;application.c: 68:       }
 }
 [e $U 307  ]
-"68
-[; ;application.c: 68:       else if((lm35_res1_Celsius >= 30) && (lm35_res1_Celsius < 35)){
+"69
+[; ;application.c: 69:       else if((lm35_res1_Celsius >= 30) && (lm35_res1_Celsius < 35)){
 [e :U 306 ]
 [e $ ! && >= -> _lm35_res1_Celsius `ui -> -> 30 `i `ui < -> _lm35_res1_Celsius `ui -> -> 35 `i `ui 308  ]
 {
-"69
-[; ;application.c: 69:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 50);
-[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 50 `i `uc ]
 "70
-[; ;application.c: 70:         ret = dc_motor_move_right(&dc_motor_1);
-[e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
+[; ;application.c: 70:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 50);
+[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 50 `i `uc ]
 "71
-[; ;application.c: 71:       }
+[; ;application.c: 71:         ret = dc_motor_move_right(&dc_motor_1);
+[e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
+"72
+[; ;application.c: 72:         ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 2");
+[e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 4 `i `uc :s 5C ]
+"73
+[; ;application.c: 73:       }
 }
 [e $U 309  ]
-"72
-[; ;application.c: 72:       else if((lm35_res1_Celsius >= 35) && (lm35_res1_Celsius < 40)){
+"74
+[; ;application.c: 74:       else if((lm35_res1_Celsius >= 35) && (lm35_res1_Celsius < 40)){
 [e :U 308 ]
 [e $ ! && >= -> _lm35_res1_Celsius `ui -> -> 35 `i `ui < -> _lm35_res1_Celsius `ui -> -> 40 `i `ui 310  ]
 {
-"73
-[; ;application.c: 73:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 75);
-[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 75 `i `uc ]
-"74
-[; ;application.c: 74:         ret = dc_motor_move_right(&dc_motor_1);
-[e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
 "75
-[; ;application.c: 75:       }
+[; ;application.c: 75:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 75);
+[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 75 `i `uc ]
+"76
+[; ;application.c: 76:         ret = dc_motor_move_right(&dc_motor_1);
+[e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
+"77
+[; ;application.c: 77:         ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 3");
+[e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 4 `i `uc :s 6C ]
+"78
+[; ;application.c: 78:       }
 }
 [e $U 311  ]
-"76
-[; ;application.c: 76:       else if(lm35_res1_Celsius >= 40){
+"79
+[; ;application.c: 79:       else if(lm35_res1_Celsius >= 40){
 [e :U 310 ]
 [e $ ! >= -> _lm35_res1_Celsius `ui -> -> 40 `i `ui 312  ]
 {
-"77
-[; ;application.c: 77:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 100);
-[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 100 `i `uc ]
-"78
-[; ;application.c: 78:         ret = dc_motor_move_right(&dc_motor_1);
-[e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
-"79
-[; ;application.c: 79:       }
-}
-[e $U 313  ]
 "80
-[; ;application.c: 80:       else{
-[e :U 312 ]
-{
+[; ;application.c: 80:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 100);
+[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 100 `i `uc ]
 "81
-[; ;application.c: 81:           ret = CCP_PWM_Set_Duty(&ccp1_obj, 0);
-[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 0 `i `uc ]
+[; ;application.c: 81:         ret = dc_motor_move_right(&dc_motor_1);
+[e = _ret ( _dc_motor_move_right (1 -> &U _dc_motor_1 `*CS277 ]
 "82
-[; ;application.c: 82:           ret = dc_motor_stop(&dc_motor_1);
-[e = _ret ( _dc_motor_stop (1 -> &U _dc_motor_1 `*CS277 ]
+[; ;application.c: 82:         ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 4");
+[e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 4 `i `uc :s 7C ]
 "83
 [; ;application.c: 83:       }
+}
+[e $U 313  ]
+"84
+[; ;application.c: 84:       else{
+[e :U 312 ]
+{
+"85
+[; ;application.c: 85:         ret = CCP_PWM_Set_Duty(&ccp1_obj, 0);
+[e = _ret ( _CCP_PWM_Set_Duty (2 , -> &U _ccp1_obj `*CS292 -> -> 0 `i `uc ]
+"86
+[; ;application.c: 86:         ret = dc_motor_stop(&dc_motor_1);
+[e = _ret ( _dc_motor_stop (1 -> &U _dc_motor_1 `*CS277 ]
+"87
+[; ;application.c: 87:         ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is Closed    ");
+[e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 4 `i `uc :s 8C ]
+"88
+[; ;application.c: 88:       }
 }
 [e :U 313 ]
 [e :U 311 ]
 [e :U 309 ]
 [e :U 307 ]
-"86
-[; ;application.c: 86:   }
+"91
+[; ;application.c: 91:   }
 }
 [e :U 303 ]
 [e $U 304  ]
 [e :U 305 ]
-"87
-[; ;application.c: 87:   return (0);
+"92
+[; ;application.c: 92:   return (0);
 [e ) -> 0 `i ]
 [e $UE 302  ]
-"89
-[; ;application.c: 89: }
+"94
+[; ;application.c: 94: }
 [e :UE 302 ]
 }
-"91
-[; ;application.c: 91: void application_initialize(void){
+"96
+[; ;application.c: 96: void application_initialize(void){
 [v _application_initialize `(v ~T0 @X0 1 ef ]
 {
 [e :U _application_initialize ]
 [f ]
-"92
-[; ;application.c: 92:     Std_ReturnType ret = (Std_ReturnType)0x00;
+"97
+[; ;application.c: 97:     Std_ReturnType ret = (Std_ReturnType)0x00;
 [v _ret `uc ~T0 @X0 1 a ]
 [e = _ret -> -> 0 `i `uc ]
-"93
-[; ;application.c: 93:     ecu_layer_init();
-[e ( _ecu_layer_init ..  ]
-"94
-[; ;application.c: 94:     ret = ADC_Init(&adc_a0);
-[e = _ret ( _ADC_Init (1 -> &U _adc_a0 `*CS288 ]
-"95
-[; ;application.c: 95:     ret = CCP_Init(&ccp1_obj);
-[e = _ret ( _CCP_Init (1 -> &U _ccp1_obj `*CS292 ]
-"96
-[; ;application.c: 96:     ret = Timer2_Init(&timer2_obj);
-[e = _ret ( _Timer2_Init (1 -> &U _timer2_obj `*CS284 ]
-"97
-[; ;application.c: 97:     (PIE1bits.TMR2IE = 0);
-[e = . . _PIE1bits 0 1 -> -> 0 `i `uc ]
 "98
-[; ;application.c: 98: }
+[; ;application.c: 98:     ecu_layer_init();
+[e ( _ecu_layer_init ..  ]
+"99
+[; ;application.c: 99:     ret = ADC_Init(&adc_a0);
+[e = _ret ( _ADC_Init (1 -> &U _adc_a0 `*CS288 ]
+"100
+[; ;application.c: 100:     ret = CCP_Init(&ccp1_obj);
+[e = _ret ( _CCP_Init (1 -> &U _ccp1_obj `*CS292 ]
+"101
+[; ;application.c: 101:     ret = Timer2_Init(&timer2_obj);
+[e = _ret ( _Timer2_Init (1 -> &U _timer2_obj `*CS284 ]
+"102
+[; ;application.c: 102:     (PIE1bits.TMR2IE = 0);
+[e = . . _PIE1bits 0 1 -> -> 0 `i `uc ]
+"103
+[; ;application.c: 103: }
 [e :UE 314 ]
 }
-"100
-[; ;application.c: 100: void ADC_DefaultinterruptHandler(void){
+"105
+[; ;application.c: 105: void ADC_DefaultinterruptHandler(void){
 [v _ADC_DefaultinterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _ADC_DefaultinterruptHandler ]
 [f ]
-"101
-[; ;application.c: 101:     Std_ReturnType ret = (Std_ReturnType)0x00;
+"106
+[; ;application.c: 106:     Std_ReturnType ret = (Std_ReturnType)0x00;
 [v _ret `uc ~T0 @X0 1 a ]
 [e = _ret -> -> 0 `i `uc ]
-"102
-[; ;application.c: 102:     adc_a0.adc_channel = ADC_CHANNEL_AN0;
+"107
+[; ;application.c: 107:     adc_a0.adc_channel = ADC_CHANNEL_AN0;
 [e = . _adc_a0 4 . `E3807 0 ]
-"103
-[; ;application.c: 103:     ret = ADC_GetConversionResult(&adc_a0, &lm35_res1);
+"108
+[; ;application.c: 108:     ret = ADC_GetConversionResult(&adc_a0, &lm35_res1);
 [e = _ret ( _ADC_GetConversionResult (2 , -> &U _adc_a0 `*CS288 &U _lm35_res1 ]
-"104
-[; ;application.c: 104: }
+"109
+[; ;application.c: 109: }
 [e :UE 315 ]
 }
 [a 2C 84 69 77 80 69 82 65 84 85 82 69 32 58 0 ]
+[a 7C 70 97 110 32 105 115 32 79 78 32 76 69 86 69 76 32 52 0 ]
+[a 6C 70 97 110 32 105 115 32 79 78 32 76 69 86 69 76 32 51 0 ]
+[a 5C 70 97 110 32 105 115 32 79 78 32 76 69 86 69 76 32 50 0 ]
+[a 4C 70 97 110 32 105 115 32 79 78 32 76 69 86 69 76 32 49 0 ]
 [a 1C 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 0 ]
 [a 3C 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 0 ]
+[a 8C 70 97 110 32 105 115 32 67 108 111 115 101 100 32 32 32 32 0 ]

@@ -5886,22 +5886,27 @@ int main() {
       if((lm35_res1_Celsius >= 20) && (lm35_res1_Celsius < 30)){
         ret = CCP_PWM_Set_Duty(&ccp1_obj, 25);
         ret = dc_motor_move_right(&dc_motor_1);
+        ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 1");
       }
       else if((lm35_res1_Celsius >= 30) && (lm35_res1_Celsius < 35)){
         ret = CCP_PWM_Set_Duty(&ccp1_obj, 50);
         ret = dc_motor_move_right(&dc_motor_1);
+        ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 2");
       }
       else if((lm35_res1_Celsius >= 35) && (lm35_res1_Celsius < 40)){
         ret = CCP_PWM_Set_Duty(&ccp1_obj, 75);
         ret = dc_motor_move_right(&dc_motor_1);
+        ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 3");
       }
       else if(lm35_res1_Celsius >= 40){
         ret = CCP_PWM_Set_Duty(&ccp1_obj, 100);
         ret = dc_motor_move_right(&dc_motor_1);
+        ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is ON LEVEL 4");
       }
       else{
-          ret = CCP_PWM_Set_Duty(&ccp1_obj, 0);
-          ret = dc_motor_stop(&dc_motor_1);
+        ret = CCP_PWM_Set_Duty(&ccp1_obj, 0);
+        ret = dc_motor_stop(&dc_motor_1);
+        ret = lcd_4bit_send_string_pos(&lcd_1, 4, 4, "Fan is Closed    ");
       }
 
 
