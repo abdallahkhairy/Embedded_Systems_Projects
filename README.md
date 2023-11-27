@@ -19,5 +19,6 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 <img width="1000" alt="State Machine" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/33b9b212-58a2-4c32-aff4-387e5c5bf659">
 
 ## Fan Control System Using PWM
-<img width="1000" alt="FAN CONTROL" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/cb3932fd-d9aa-491e-b986-938c443736fc">
+<img width="1000" alt="Fan Control" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/140df105-03f8-451f-9d5a-c92063af7d7c">
+
 
