@@ -15,3 +15,5 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 ## Stop Watch
 <img width="750" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/b72481d3-e22f-4caa-9804-bf049ab06f14">
 
+## Fan Control System Using PWM
+<img width="750" alt="FAN CONTROL" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/9e0d57df-00d4-4d76-8aa6-1b4e55483abf">
