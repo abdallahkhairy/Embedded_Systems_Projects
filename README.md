@@ -13,4 +13,5 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 <img width="480" alt="State Machine" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/33b9b212-58a2-4c32-aff4-387e5c5bf659">
 
 ## Stop Watch
-<img width="622" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/2913d86e-ed31-43d5-b685-7f4b0afb5f97">
+<img width="622" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/b72481d3-e22f-4caa-9804-bf049ab06f14">
+
