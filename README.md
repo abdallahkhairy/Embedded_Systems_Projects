@@ -1,4 +1,4 @@
-# Embedded_Systems_Projects
+# Embedded Systems Projects
 Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MCAL, ECUAL Layers)
 
 ## Smart Home
