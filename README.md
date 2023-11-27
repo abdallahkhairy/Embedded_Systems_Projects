@@ -7,13 +7,13 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 
 ## Traffic Light System with State Machine
 
-<img width="1000" alt="Traffic Light" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/f386b707-1e55-4b23-aadc-6f4464e866df">
+<img width="1000" alt="Traffic Light" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/c589ee7b-68db-4c2b-9f75-8e32f0e0e932">
 
 ### State Machine Design
 <img width="700" alt="State Machine" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/33b9b212-58a2-4c32-aff4-387e5c5bf659">
 
 ## Stop Watch
-<img width="1000" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/0565e4f2-b484-481f-89fc-7e3735c79cef">
+<img width="1000" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/bab2e3da-1626-4729-8c77-9b093546e870">
 
 ## Fan Control System Using PWM
 <img width="1000" alt="FAN CONTROL" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/cb3932fd-d9aa-491e-b986-938c443736fc">
