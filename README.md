@@ -5,7 +5,7 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 <img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/f19c0154-2079-4a25-80ea-9585fcbe3747">
 
 ## Simple Calcultor
-<img width="1000" alt="Calculator" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/8ae0e5da-015b-4b0d-ac7f-7af7ab26f1b8">
+<img width="1000" alt="Calculator" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/b7b309a2-7ad0-449b-921e-4b77aaa28aaa">
 
 ## Stop Watch
 <img width="1000" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/bab2e3da-1626-4729-8c77-9b093546e870">
