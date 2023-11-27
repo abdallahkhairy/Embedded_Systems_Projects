@@ -2,7 +2,7 @@
 Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MCAL, ECUAL Layers)
 
 ## Smart Home
-<img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/469a204d-5c54-4e4f-aed8-3137a091eb80">
+<img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/1007ea65-01af-41d9-8864-094ff45e9989">
 
 ## Simple Calcultor
 
