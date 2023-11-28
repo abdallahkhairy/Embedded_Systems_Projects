@@ -8,7 +8,7 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 <img width="1000" alt="Calculator" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/b7b309a2-7ad0-449b-921e-4b77aaa28aaa">
 
 ## Stop Watch
-<img width="1000" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/d3922c36-3c07-4e63-9b07-a8a0a0bd8167">
+<img width="1000" alt="Stop Watch" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/f2bd6717-71eb-45e9-9d17-0f1235382b32">
 
 ## Traffic Light System with State Machine
 <img width="1000" alt="Traffic Light" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/3643fb15-6329-4698-94b9-e3ba5dafd170">
