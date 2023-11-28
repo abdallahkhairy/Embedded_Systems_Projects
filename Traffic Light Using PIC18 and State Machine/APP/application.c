@@ -38,12 +38,12 @@ void Int0_APP_ISR(void);
 timer0_t timer0 = {
     .TMR0_InterruptHandler = TMR0_DefualtInterruptHandler,
     .prescaler_enable = TIMER0_PRESCALER_ENABLE_CFG,
-    //.prescaler_value = TIMER0_PRESCALER_DIV_BY_32, // for 1 sec timing
-    .prescaler_value = TIMER0_PRESCALER_DIV_BY_16,  // 300 ms to quick debugging
+    .prescaler_value = TIMER0_PRESCALER_DIV_BY_32, // for 1 sec timing
+    //.prescaler_value = TIMER0_PRESCALER_DIV_BY_16,  // 300 ms to quick debugging
     .timer0_counter_edge = TIMER0_COUNTER_RISING_EDGE_CFG,
     .timer0_mode = TIMER0_TIMER_MODE,
-    //.timer0_preload_value = 3036, // for 1 sec timing
-    .timer0_preload_value = 28036, // 300 ms to quick debugging
+    .timer0_preload_value = 3036, // for 1 sec timing
+    //.timer0_preload_value = 28036, // 300 ms to quick debugging
     .timer0_register_size = TIMER0_16BIT_REGISTER_MODE,
 };
 

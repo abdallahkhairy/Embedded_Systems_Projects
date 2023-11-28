@@ -49,7 +49,7 @@ segment_t seg2 = {
 };
 */
 
-/*
+
 chr_lcd_4bit_t lcd_1 = {
     .lcd_rs.port = PORTD_INDEX,
     .lcd_rs.pin = GPIO_PIN0,
@@ -76,7 +76,7 @@ chr_lcd_4bit_t lcd_1 = {
     .lcd_data[3].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[3].logic = GPIO_LOW
 };
-*/
+
 
 /* Traffic Light
 led_t led_red_car = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN0, ._led.logic = LED_OFF};
@@ -87,7 +87,7 @@ led_t led_green_people = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN3, ._led
 
 led_t ready_yellow = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN5, ._led.logic = LED_OFF};
 */
-
+/*
 chr_lcd_4bit_t lcd_1 = {
     .lcd_rs.port = PORTC_INDEX,
     .lcd_rs.pin = GPIO_PIN0,
@@ -101,20 +101,12 @@ chr_lcd_4bit_t lcd_1 = {
     .lcd_data[0].pin = GPIO_PIN2,
     .lcd_data[0].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[0].logic = GPIO_LOW,
-    //.lcd_data[1].port = PORTC_INDEX,
-    //.lcd_data[1].pin = GPIO_PIN3,
-    //.lcd_data[1].direction = GPIO_DIRECTION_OUTPUT,
-    //.lcd_data[1].logic = GPIO_LOW,
-    //.lcd_data[2].port = PORTC_INDEX,
-    //.lcd_data[2].pin = GPIO_PIN4,
-    //.lcd_data[2].direction = GPIO_DIRECTION_OUTPUT,
-    //.lcd_data[2].logic = GPIO_LOW,
-     .lcd_data[1].port = PORTD_INDEX,
-    .lcd_data[1].pin = GPIO_PIN6,
+    .lcd_data[1].port = PORTC_INDEX,
+    .lcd_data[1].pin = GPIO_PIN3,
     .lcd_data[1].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[1].logic = GPIO_LOW,
-    .lcd_data[2].port = PORTD_INDEX,
-    .lcd_data[2].pin = GPIO_PIN7,
+    .lcd_data[2].port = PORTC_INDEX,
+    .lcd_data[2].pin = GPIO_PIN4,
     .lcd_data[2].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[2].logic = GPIO_LOW,
     .lcd_data[3].port = PORTC_INDEX,
@@ -122,7 +114,7 @@ chr_lcd_4bit_t lcd_1 = {
     .lcd_data[3].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[3].logic = GPIO_LOW
 };
- 
+ */
 chr_lcd_8bit_t lcd_2 = {
     .lcd_rs.port = PORTC_INDEX,
     .lcd_rs.pin = GPIO_PIN6,
@@ -233,9 +225,9 @@ void ecu_layer_init(void){
     //ret = led_initialize(&led_red_people);
     //ret = led_initialize(&led_green_people);
     //ret = led_initialize(&ready_yellow);
-    //ret = dc_motor_initialize(&dc_motor_1);
+    ret = dc_motor_initialize(&dc_motor_1);
     //ret = dc_motor_initialize(&dc_motor_2);
-    //ret = lcd_4bit_intialize(&lcd_1);
+    ret = lcd_4bit_intialize(&lcd_1);
     //ret = keypad_initialize(&keypad1);
 
 }

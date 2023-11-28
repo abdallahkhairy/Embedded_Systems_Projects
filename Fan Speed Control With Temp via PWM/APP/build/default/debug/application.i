@@ -5342,26 +5342,157 @@ Std_ReturnType convert_uint16_to_string(uint16 value, uint8 *str);
 Std_ReturnType convert_uint32_to_string(uint32 value, uint8 *str);
 # 17 "./ECU_Layer/ecu_layer_init.h" 2
 
+# 1 "./ECU_Layer/RealTimeClockDS1307/RealTimeClockDS1307.h" 1
+# 14 "./ECU_Layer/RealTimeClockDS1307/RealTimeClockDS1307.h"
+# 1 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/hal_i2c.h" 1
+# 15 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/hal_i2c.h"
+# 1 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h" 1
+# 13 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h"
+# 1 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 1
+# 12 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h"
+# 1 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 1
+# 15 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
+# 1 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h" 1
+# 15 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 2
+# 54 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
+typedef enum{
+    INTERRUPT_LOW_PRIORITY = 0,
+    INTERRUPT_HIGH_PRIORITY
+}interrupt_priority_cfg;
+# 12 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 2
+# 13 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h" 2
+
+# 1 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart_cfg.h" 1
+# 14 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h" 2
+# 61 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h"
+typedef enum{
+    BAUDRATE_ASYN_8BIT_lOW_SPEED,
+    BAUDRATE_ASYN_8BIT_HIGH_SPEED,
+    BAUDRATE_ASYN_16BIT_lOW_SPEED,
+    BAUDRATE_ASYN_16BIT_HIGH_SPEED,
+    BAUDRATE_SYN_8BIT,
+    BAUDRATE_SYN_16BIT
+}baudrate_gen_t;
+
+typedef struct{
+    interrupt_priority_cfg usart_tx_int_priority;
+ uint8 usart_tx_enable : 1;
+ uint8 usart_tx_interrupt_enable : 1;
+ uint8 usart_tx_9bit_enable : 1;
+    uint8 usart_tx_reserved : 5;
+}usart_tx_cfg_t;
+
+typedef struct{
+    interrupt_priority_cfg usart_rx_int_priority;
+ uint8 usart_rx_enable : 1;
+ uint8 usart_rx_interrupt_enable : 1;
+ uint8 usart_rx_9bit_enable : 1;
+    uint8 usart_rx_reserved : 5;
+}usart_rx_cfg_t;
+
+typedef union{
+ struct{
+  uint8 usart_tx_reserved : 6;
+  uint8 usart_ferr : 1;
+  uint8 usart_oerr : 1;
+ };
+ uint8 status;
+}usart_error_status_t;
+
+typedef struct{
+    uint32 baudrate;
+    baudrate_gen_t baudrate_gen_gonfig;
+    usart_tx_cfg_t usart_tx_cfg;
+ usart_rx_cfg_t usart_rx_cfg;
+ usart_error_status_t error_status;
+ void (*EUSART_TxDefaultInterruptHandler)(void);
+    void (*EUSART_RxDefaultInterruptHandler)(void);
+    void (*EUSART_FramingErrorHandler)(void);
+    void (*EUSART_OverrunErrorHandler)(void);
+}usart_t;
+
+
+Std_ReturnType EUSART_ASYNC_Init(const usart_t *_eusart);
+Std_ReturnType EUSART_ASYNC_DeInit(const usart_t *_eusart);
+
+Std_ReturnType EUSART_ASYNC_ReadByteBlocking(uint8 *_data);
+Std_ReturnType EUSART_ASYNC_ReadByteNonBlocking(uint8 *_data);
+Std_ReturnType EUSART_ASYNC_RX_Restart(void);
+
+Std_ReturnType EUSART_ASYNC_WriteByteBlocking(uint8 _data);
+Std_ReturnType EUSART_ASYNC_WriteStringBlocking(uint8 *_data);
+Std_ReturnType EUSART_ASYNC_WriteByteNonBlocking(uint8 _data);
+Std_ReturnType EUSART_ASYNC_WriteStringNonBlocking(uint8 *_data);
+# 15 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/hal_i2c.h" 2
+# 78 "./ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/hal_i2c.h"
+typedef struct{
+ uint8 i2c_mode_cfg;
+    uint8 i2c_slave_address;
+ uint8 i2c_mode : 1;
+ uint8 i2c_slew_rate : 1;
+ uint8 i2c_SMBus_control : 1;
+ uint8 i2c_general_call : 1;
+ uint8 i2c_master_rec_mode : 1;
+ uint8 i2c_reserved : 3;
+
+    interrupt_priority_cfg mssp_i2c_priority;
+    interrupt_priority_cfg mssp_i2c_bc_priority;
+
+}i2c_configs_t;
+
+typedef struct{
+ uint32 i2c_clock;
+    i2c_configs_t i2c_cfg;
+
+    void (*I2C_Report_Write_Collision)(void);
+    void (*I2C_DefaultInterruptHandler)(void);
+    void (*I2C_Report_Receive_Overflow)(void);
+
+}mssp_i2c_t;
+
+
+Std_ReturnType MSSP_I2C_Init(const mssp_i2c_t *i2c_obj);
+Std_ReturnType MSSP_I2C_DeInit(const mssp_i2c_t *i2c_obj);
+
+Std_ReturnType MSSP_I2C_Master_Send_Start(const mssp_i2c_t *i2c_obj);
+Std_ReturnType MSSP_I2C_Master_Send_Repeated_Start(const mssp_i2c_t *i2c_obj);
+Std_ReturnType MSSP_I2C_Master_Send_Stop(const mssp_i2c_t *i2c_obj);
+
+Std_ReturnType MSSP_I2C_Master_Write_Blocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack);
+Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data);
+
+Std_ReturnType MSSP_I2C_Master_Write_NBlocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack);
+Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data);
+
+Std_ReturnType MSSP_I2C_EXT_Device_Write_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 _data, uint8 *slave_ack);
+Std_ReturnType MSSP_I2C_EXT_Device_Read_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 *_data, uint8 *slave_ack);
+# 14 "./ECU_Layer/RealTimeClockDS1307/RealTimeClockDS1307.h" 2
+
+
+
+
+
+
+
+typedef struct{
+    uint8_t _Hours;
+    uint8_t _Minutes;
+    uint8_t _Seconds;
+    uint8_t _Year;
+    uint8_t _Month;
+    uint8_t _Day;
+}RealTimeClockDS1307_t;
+
+RealTimeClockDS1307_t RealTimeClockDS1307_Get_Date_time(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 *slave_ack);
+void Print_RealTimeClockDS1307(RealTimeClockDS1307_t RTC);
+# 18 "./ECU_Layer/ecu_layer_init.h" 2
+
 
 void ecu_layer_init(void);
 # 12 "./application.h" 2
 
 
 # 1 "./MCAL_Layer/Timer0/hal_timr0.h" 1
-# 15 "./MCAL_Layer/Timer0/hal_timr0.h"
-# 1 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 1
-# 12 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h"
-# 1 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 1
-# 15 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
-# 1 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h" 1
-# 15 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 2
-# 54 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
-typedef enum{
-    INTERRUPT_LOW_PRIORITY = 0,
-    INTERRUPT_HIGH_PRIORITY
-}interrupt_priority_cfg;
-# 12 "./MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 2
-# 15 "./MCAL_Layer/Timer0/hal_timr0.h" 2
 # 44 "./MCAL_Layer/Timer0/hal_timr0.h"
 typedef enum{
     TIMER0_PRESCALER_DIV_BY_2= 0,
@@ -5670,70 +5801,6 @@ Std_ReturnType CCP_PWM_Start(const ccp_t *_ccp_obj);
 Std_ReturnType CCP_PWM_Stop(const ccp_t *_ccp_obj);
 # 20 "./application.h" 2
 
-# 1 "./MCAL_Layer/usart/hal_usart.h" 1
-# 14 "./MCAL_Layer/usart/hal_usart.h"
-# 1 "./MCAL_Layer/usart/hal_usart_cfg.h" 1
-# 14 "./MCAL_Layer/usart/hal_usart.h" 2
-# 61 "./MCAL_Layer/usart/hal_usart.h"
-typedef enum{
-    BAUDRATE_ASYN_8BIT_lOW_SPEED,
-    BAUDRATE_ASYN_8BIT_HIGH_SPEED,
-    BAUDRATE_ASYN_16BIT_lOW_SPEED,
-    BAUDRATE_ASYN_16BIT_HIGH_SPEED,
-    BAUDRATE_SYN_8BIT,
-    BAUDRATE_SYN_16BIT
-}baudrate_gen_t;
-
-typedef struct{
-    interrupt_priority_cfg usart_tx_int_priority;
- uint8 usart_tx_enable : 1;
- uint8 usart_tx_interrupt_enable : 1;
- uint8 usart_tx_9bit_enable : 1;
-    uint8 usart_tx_reserved : 5;
-}usart_tx_cfg_t;
-
-typedef struct{
-    interrupt_priority_cfg usart_rx_int_priority;
- uint8 usart_rx_enable : 1;
- uint8 usart_rx_interrupt_enable : 1;
- uint8 usart_rx_9bit_enable : 1;
-    uint8 usart_rx_reserved : 5;
-}usart_rx_cfg_t;
-
-typedef union{
- struct{
-  uint8 usart_tx_reserved : 6;
-  uint8 usart_ferr : 1;
-  uint8 usart_oerr : 1;
- };
- uint8 status;
-}usart_error_status_t;
-
-typedef struct{
-    uint32 baudrate;
-    baudrate_gen_t baudrate_gen_gonfig;
-    usart_tx_cfg_t usart_tx_cfg;
- usart_rx_cfg_t usart_rx_cfg;
- usart_error_status_t error_status;
- void (*EUSART_TxDefaultInterruptHandler)(void);
-    void (*EUSART_RxDefaultInterruptHandler)(void);
-    void (*EUSART_FramingErrorHandler)(void);
-    void (*EUSART_OverrunErrorHandler)(void);
-}usart_t;
-
-
-Std_ReturnType EUSART_ASYNC_Init(const usart_t *_eusart);
-Std_ReturnType EUSART_ASYNC_DeInit(const usart_t *_eusart);
-
-Std_ReturnType EUSART_ASYNC_ReadByteBlocking(uint8 *_data);
-Std_ReturnType EUSART_ASYNC_ReadByteNonBlocking(uint8 *_data);
-Std_ReturnType EUSART_ASYNC_RX_Restart(void);
-
-Std_ReturnType EUSART_ASYNC_WriteByteBlocking(uint8 _data);
-Std_ReturnType EUSART_ASYNC_WriteStringBlocking(uint8 *_data);
-Std_ReturnType EUSART_ASYNC_WriteByteNonBlocking(uint8 _data);
-Std_ReturnType EUSART_ASYNC_WriteStringNonBlocking(uint8 *_data);
-# 21 "./application.h" 2
 
 # 1 "./MCAL_Layer/SPI/hal_spi.h" 1
 # 54 "./MCAL_Layer/SPI/hal_spi.h"
@@ -5762,47 +5829,6 @@ Std_ReturnType SPI_Send_Byte_NonBlocking(const SPI_Config *Config, const uint8 _
 Std_ReturnType SPI_Read_Byte_NonBlocking(const SPI_Config *Config, uint8 *_data);
 # 22 "./application.h" 2
 
-# 1 "./MCAL_Layer/I2C/hal_i2c.h" 1
-# 77 "./MCAL_Layer/I2C/hal_i2c.h"
-typedef struct{
- uint8 i2c_mode_cfg;
-    uint8 i2c_slave_address;
- uint8 i2c_mode : 1;
- uint8 i2c_slew_rate : 1;
- uint8 i2c_SMBus_control : 1;
- uint8 i2c_general_call : 1;
- uint8 i2c_master_rec_mode : 1;
- uint8 i2c_reserved : 3;
-
-    interrupt_priority_cfg mssp_i2c_priority;
-    interrupt_priority_cfg mssp_i2c_bc_priority;
-
-}i2c_configs_t;
-
-typedef struct{
- uint32 i2c_clock;
-    i2c_configs_t i2c_cfg;
-
-    void (*I2C_Report_Write_Collision)(void);
-    void (*I2C_DefaultInterruptHandler)(void);
-    void (*I2C_Report_Receive_Overflow)(void);
-
-}mssp_i2c_t;
-
-
-Std_ReturnType MSSP_I2C_Init(const mssp_i2c_t *i2c_obj);
-Std_ReturnType MSSP_I2C_DeInit(const mssp_i2c_t *i2c_obj);
-
-Std_ReturnType MSSP_I2C_Master_Send_Start(const mssp_i2c_t *i2c_obj);
-Std_ReturnType MSSP_I2C_Master_Send_Repeated_Start(const mssp_i2c_t *i2c_obj);
-Std_ReturnType MSSP_I2C_Master_Send_Stop(const mssp_i2c_t *i2c_obj);
-
-Std_ReturnType MSSP_I2C_Master_Write_Blocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack);
-Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data);
-
-Std_ReturnType MSSP_I2C_Master_Write_NBlocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack);
-Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data);
-# 23 "./application.h" 2
 
 
 

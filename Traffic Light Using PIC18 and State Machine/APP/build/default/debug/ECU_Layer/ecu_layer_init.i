@@ -5270,6 +5270,22 @@ Std_ReturnType led_turn_off(const led_t *led);
 Std_ReturnType led_turn_toggle(const led_t *led);
 # 5 "ECU_Layer/ecu_layer_init.c" 2
 
+# 1 "ECU_Layer/DC_Motor/ecu_dc_motor.h" 1
+# 12 "ECU_Layer/DC_Motor/ecu_dc_motor.h"
+# 1 "ECU_Layer/DC_Motor/ecu_dc_motor_cfg.h" 1
+# 12 "ECU_Layer/DC_Motor/ecu_dc_motor.h" 2
+# 25 "ECU_Layer/DC_Motor/ecu_dc_motor.h"
+typedef struct{
+    pin_config_t dc_motor_pin[2];
+}dc_motor_t;
+
+
+Std_ReturnType dc_motor_initialize(const dc_motor_t *_dc_motor);
+Std_ReturnType dc_motor_move_right(const dc_motor_t *_dc_motor);
+Std_ReturnType dc_motor_move_left(const dc_motor_t *_dc_motor);
+Std_ReturnType dc_motor_stop(const dc_motor_t *_dc_motor);
+# 6 "ECU_Layer/ecu_layer_init.c" 2
+
 
 
 segment_t seg1 = {
@@ -5312,6 +5328,8 @@ segment_t seg2 = {
     .segment_type = SEGMENT_COMMON_CATHODE
 };
 
+
+
 chr_lcd_4bit_t lcd_1 = {
     .lcd_rs.port = PORTD_INDEX,
     .lcd_rs.pin = GPIO_PIN0,
@@ -5339,6 +5357,14 @@ chr_lcd_4bit_t lcd_1 = {
     .lcd_data[3].logic = GPIO_LOW
 };
 
+led_t led_red_car = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN0, ._led.logic = LED_OFF};
+led_t led_green_car = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN1, ._led.logic = LED_OFF};
+
+led_t led_red_people = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN2, ._led.logic = LED_OFF};
+led_t led_green_people = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN3, ._led.logic = LED_OFF};
+
+led_t ready_yellow = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN5, ._led.logic = LED_OFF};
+# 113 "ECU_Layer/ecu_layer_init.c"
 chr_lcd_8bit_t lcd_2 = {
     .lcd_rs.port = PORTC_INDEX,
     .lcd_rs.pin = GPIO_PIN6,
@@ -5417,13 +5443,28 @@ keypad_t keypad1 = {
     .keypad_columns_pins[3].logic = GPIO_LOW,
 };
 
-led_t led_red_car = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN0, ._led.logic = LED_OFF};
-led_t led_green_car = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN1, ._led.logic = LED_OFF};
+dc_motor_t dc_motor_1 = {
+    .dc_motor_pin[0].port = PORTC_INDEX,
+    .dc_motor_pin[0].pin = GPIO_PIN3,
+    .dc_motor_pin[0].logic = 0x00U,
+    .dc_motor_pin[0].direction = GPIO_DIRECTION_OUTPUT,
+    .dc_motor_pin[1].port = PORTC_INDEX,
+    .dc_motor_pin[1].pin = GPIO_PIN4,
+    .dc_motor_pin[1].logic = 0x00U,
+    .dc_motor_pin[1].direction = GPIO_DIRECTION_OUTPUT
+};
 
-led_t led_red_people = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN2, ._led.logic = LED_OFF};
-led_t led_green_people = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN3, ._led.logic = LED_OFF};
+dc_motor_t dc_motor_2 = {
+    .dc_motor_pin[0].port = PORTD_INDEX,
+    .dc_motor_pin[0].pin = GPIO_PIN2,
+    .dc_motor_pin[0].logic = 0x00U,
+    .dc_motor_pin[0].direction = GPIO_DIRECTION_OUTPUT,
+    .dc_motor_pin[1].port = PORTD_INDEX,
+    .dc_motor_pin[1].pin = GPIO_PIN3,
+    .dc_motor_pin[1].logic = 0x00U,
+    .dc_motor_pin[1].direction = GPIO_DIRECTION_OUTPUT
+};
 
-led_t ready_yellow = {._led.port = PORTA_INDEX, ._led.pin = GPIO_PIN5, ._led.logic = LED_OFF};
 
 void ecu_layer_init(void){
     Std_ReturnType ret = (Std_ReturnType)0x00;
@@ -5434,6 +5475,9 @@ void ecu_layer_init(void){
     ret = led_initialize(&led_red_people);
     ret = led_initialize(&led_green_people);
     ret = led_initialize(&ready_yellow);
+
+
     ret = lcd_4bit_intialize(&lcd_1);
+
 
 }

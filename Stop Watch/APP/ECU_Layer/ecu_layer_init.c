@@ -226,7 +226,7 @@ dc_motor_t dc_motor_2 = {
 
 void ecu_layer_init(void){
     Std_ReturnType ret = E_NOT_OK;
-    //ret = seven_segement_intialize(&seg1);
+    ret = seven_segement_intialize(&seg1);
     //ret = seven_segement_intialize(&seg2);
     //ret = led_initialize(&led_red_car);
     //ret = led_initialize(&led_green_car);

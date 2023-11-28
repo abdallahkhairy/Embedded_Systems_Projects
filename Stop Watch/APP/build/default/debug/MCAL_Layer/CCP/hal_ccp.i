@@ -5232,9 +5232,9 @@ typedef struct{
     pin_config_t ccp_pin;
     ccp_capture_timer_t ccp_capture_timer;
 
-
-
-
+    uint32 PWM_Frequency;
+    uint8 timer2_postscaler_value;
+    uint8 timer2_prescaler_value;
 
 
     void (* CCP1_InterruptHandler)(void);
@@ -5249,10 +5249,10 @@ typedef struct{
 
 Std_ReturnType CCP_Init(const ccp_t *_ccp_obj);
 Std_ReturnType CCP_DeInit(const ccp_t *_ccp_obj);
-
-
-Std_ReturnType CCP1_IsCapturedDataReady(uint8 *_capture_status);
-Std_ReturnType CCP1_Capture_Mode_Read_Value(uint16 *capture_value);
+# 146 "MCAL_Layer/CCP/hal_ccp.h"
+Std_ReturnType CCP_PWM_Set_Duty(const ccp_t *_ccp_obj, const uint8 _duty);
+Std_ReturnType CCP_PWM_Start(const ccp_t *_ccp_obj);
+Std_ReturnType CCP_PWM_Stop(const ccp_t *_ccp_obj);
 # 9 "MCAL_Layer/CCP/hal_ccp.c" 2
 
 
@@ -5295,9 +5295,9 @@ Std_ReturnType CCP_Init(const ccp_t *_ccp_obj){
         }
 
 
-
-
-
+        else if(CCP_PWM_MODE_SELECTED == _ccp_obj->ccp_mode){
+            CCP_PWM_Mode_Config(_ccp_obj);
+        }
 
         else { }
 
@@ -5337,43 +5337,76 @@ Std_ReturnType CCP_DeInit(const ccp_t *_ccp_obj){
     }
     return ret;
 }
-
-
-Std_ReturnType CCP1_IsCapturedDataReady(uint8 *_capture_status){
+# 177 "MCAL_Layer/CCP/hal_ccp.c"
+Std_ReturnType CCP_PWM_Set_Duty(const ccp_t *_ccp_obj, const uint8 _duty){
     Std_ReturnType ret = (Std_ReturnType)0x00;
-    if(((void*)0) == _capture_status){
-        ret = (Std_ReturnType)0x00;
-    }
-    else{
-        if(0X01 == PIR1bits.CCP1IF){
-            *_capture_status = 0X01;
-            (PIR1bits.CCP1IF = 0);
-        }
-        else{
-            *_capture_status = 0X00;
-        }
-        ret = (Std_ReturnType)0x01;
-    }
-    return ret;
-}
+    uint16 l_duty_temp = 0;
 
-Std_ReturnType CCP1_Capture_Mode_Read_Value(uint16 *capture_value){
-    Std_ReturnType ret = (Std_ReturnType)0x00;
-    CCP_REG_T capture_temp_value = {.ccpr_low = 0, .ccpr_high = 0};
-    if(((void*)0) == capture_value){
+    if(((void*)0) == _ccp_obj){
         ret = (Std_ReturnType)0x00;
     }
     else{
 
-        capture_temp_value.ccpr_low = CCPR1L;
-        capture_temp_value.ccpr_high = CCPR1H;
 
-        *capture_value = capture_temp_value.ccpr_16Bit;
+        l_duty_temp = (uint16)((float)4 * ((float)PR2 + 1.0) * ((float)_duty / 100.0));
+
+        if(CCP1_INST == _ccp_obj->ccp_inst){
+            CCP1CONbits.DC1B = (uint8)(l_duty_temp & 0x0003);
+            CCPR1L = (uint8)(l_duty_temp >> 2);
+        }
+        else if(CCP2_INST == _ccp_obj->ccp_inst){
+            CCP2CONbits.DC2B = (uint8)(l_duty_temp & 0x0003);
+            CCPR2L = (uint8)(l_duty_temp >> 2);
+        }
+        else{ }
+
         ret = (Std_ReturnType)0x01;
     }
+
     return ret;
 }
-# 246 "MCAL_Layer/CCP/hal_ccp.c"
+
+Std_ReturnType CCP_PWM_Start(const ccp_t *_ccp_obj){
+    Std_ReturnType ret = (Std_ReturnType)0x00;
+
+    if(((void*)0) == _ccp_obj){
+        ret = (Std_ReturnType)0x00;
+    }
+    else{
+        if(CCP1_INST == _ccp_obj->ccp_inst){
+            CCP1CONbits.CCP1M = ((uint8)0x0C);
+        }
+        else if(CCP2_INST == _ccp_obj->ccp_inst){
+            CCP2CONbits.CCP2M = ((uint8)0x0C);
+        }
+        else{ }
+        ret = (Std_ReturnType)0x01;
+    }
+
+    return ret;
+}
+
+Std_ReturnType CCP_PWM_Stop(const ccp_t *_ccp_obj){
+    Std_ReturnType ret = (Std_ReturnType)0x00;
+
+    if(((void*)0) == _ccp_obj){
+        ret = (Std_ReturnType)0x00;
+    }
+    else{
+        if(CCP1_INST == _ccp_obj->ccp_inst){
+            CCP1CONbits.CCP1M = ((uint8)0x00);
+        }
+        else if(CCP2_INST == _ccp_obj->ccp_inst){
+            CCP2CONbits.CCP2M = ((uint8)0x00);
+        }
+        else{ }
+        ret = (Std_ReturnType)0x01;
+    }
+
+    return ret;
+}
+
+
 void CCP1_ISR(void){
     (PIR1bits.CCP1IF = 0);
     if(CCP1_InterruptHandler){
@@ -5389,7 +5422,29 @@ void CCP2_ISR(void){
     }
     else{ }
 }
-# 284 "MCAL_Layer/CCP/hal_ccp.c"
+
+
+static void CCP_PWM_Mode_Config(const ccp_t *_ccp_obj){
+
+    PR2 = (uint8)(((float)8000000UL / ((float)_ccp_obj->PWM_Frequency * 4.0 * (float)_ccp_obj->timer2_prescaler_value *
+                    (float)_ccp_obj->timer2_postscaler_value)) - 1);
+
+    if(CCP1_INST == _ccp_obj->ccp_inst){
+        if(((uint8)0x0C) == _ccp_obj->ccp_mode_variant){
+            (CCP1CONbits.CCP1M = ((uint8)0x0C));
+        }
+        else { }
+    }
+    else if(CCP2_INST == _ccp_obj->ccp_inst){
+        if(((uint8)0x0C) == _ccp_obj->ccp_mode_variant){
+            (CCP2CONbits.CCP2M = ((uint8)0x0C));
+        }
+        else { }
+    }
+    else{ }
+}
+
+
 static void CCP_Interrupt_Config(const ccp_t *_ccp_obj){
 
 

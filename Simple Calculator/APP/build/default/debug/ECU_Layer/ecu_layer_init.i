@@ -5269,7 +5269,45 @@ Std_ReturnType led_turn_on(const led_t *led);
 Std_ReturnType led_turn_off(const led_t *led);
 Std_ReturnType led_turn_toggle(const led_t *led);
 # 5 "ECU_Layer/ecu_layer_init.c" 2
-# 89 "ECU_Layer/ecu_layer_init.c"
+
+# 1 "ECU_Layer/DC_Motor/ecu_dc_motor.h" 1
+# 12 "ECU_Layer/DC_Motor/ecu_dc_motor.h"
+# 1 "ECU_Layer/DC_Motor/ecu_dc_motor_cfg.h" 1
+# 12 "ECU_Layer/DC_Motor/ecu_dc_motor.h" 2
+# 25 "ECU_Layer/DC_Motor/ecu_dc_motor.h"
+typedef struct{
+    pin_config_t dc_motor_pin[2];
+}dc_motor_t;
+
+
+Std_ReturnType dc_motor_initialize(const dc_motor_t *_dc_motor);
+Std_ReturnType dc_motor_move_right(const dc_motor_t *_dc_motor);
+Std_ReturnType dc_motor_move_left(const dc_motor_t *_dc_motor);
+Std_ReturnType dc_motor_stop(const dc_motor_t *_dc_motor);
+# 6 "ECU_Layer/ecu_layer_init.c" 2
+
+
+
+segment_t seg1 = {
+    .segment_pins[0].port = PORTC_INDEX,
+    .segment_pins[0].pin = GPIO_PIN0,
+    .segment_pins[0].logic = GPIO_LOW,
+    .segment_pins[0].direction = GPIO_DIRECTION_OUTPUT,
+    .segment_pins[1].port = PORTC_INDEX,
+    .segment_pins[1].pin = GPIO_PIN1,
+    .segment_pins[1].logic = GPIO_LOW,
+    .segment_pins[1].direction = GPIO_DIRECTION_OUTPUT,
+    .segment_pins[2].port = PORTC_INDEX,
+    .segment_pins[2].pin = GPIO_PIN2,
+    .segment_pins[2].logic = GPIO_LOW,
+    .segment_pins[2].direction = GPIO_DIRECTION_OUTPUT,
+    .segment_pins[3].port = PORTC_INDEX,
+    .segment_pins[3].pin = GPIO_PIN3,
+    .segment_pins[3].logic = GPIO_LOW,
+    .segment_pins[3].direction = GPIO_DIRECTION_OUTPUT,
+    .segment_type = SEGMENT_COMMON_CATHODE
+};
+# 91 "ECU_Layer/ecu_layer_init.c"
 chr_lcd_4bit_t lcd_1 = {
     .lcd_rs.port = PORTC_INDEX,
     .lcd_rs.pin = GPIO_PIN0,
@@ -5296,6 +5334,7 @@ chr_lcd_4bit_t lcd_1 = {
     .lcd_data[3].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[3].logic = GPIO_LOW
 };
+
 chr_lcd_8bit_t lcd_2 = {
     .lcd_rs.port = PORTC_INDEX,
     .lcd_rs.pin = GPIO_PIN6,
@@ -5374,17 +5413,32 @@ keypad_t keypad1 = {
     .keypad_columns_pins[3].logic = GPIO_LOW,
 };
 
+dc_motor_t dc_motor_1 = {
+    .dc_motor_pin[0].port = PORTC_INDEX,
+    .dc_motor_pin[0].pin = GPIO_PIN3,
+    .dc_motor_pin[0].logic = 0x00U,
+    .dc_motor_pin[0].direction = GPIO_DIRECTION_OUTPUT,
+    .dc_motor_pin[1].port = PORTC_INDEX,
+    .dc_motor_pin[1].pin = GPIO_PIN4,
+    .dc_motor_pin[1].logic = 0x00U,
+    .dc_motor_pin[1].direction = GPIO_DIRECTION_OUTPUT
+};
+
+dc_motor_t dc_motor_2 = {
+    .dc_motor_pin[0].port = PORTD_INDEX,
+    .dc_motor_pin[0].pin = GPIO_PIN2,
+    .dc_motor_pin[0].logic = 0x00U,
+    .dc_motor_pin[0].direction = GPIO_DIRECTION_OUTPUT,
+    .dc_motor_pin[1].port = PORTD_INDEX,
+    .dc_motor_pin[1].pin = GPIO_PIN3,
+    .dc_motor_pin[1].logic = 0x00U,
+    .dc_motor_pin[1].direction = GPIO_DIRECTION_OUTPUT
+};
 
 
 void ecu_layer_init(void){
     Std_ReturnType ret = (Std_ReturnType)0x00;
-
-
-
-
-
-
-
+# 230 "ECU_Layer/ecu_layer_init.c"
     ret = lcd_4bit_intialize(&lcd_1);
     ret = keypad_initialize(&keypad1);
 

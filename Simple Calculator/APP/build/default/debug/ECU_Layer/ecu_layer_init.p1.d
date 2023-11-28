@@ -13,4 +13,6 @@ ECU_Layer/KeyPad/ecu_keypad_cfg.h  \
 ECU_Layer/7_Segment/ecu_seven_segment.h  \
 ECU_Layer/7_Segment/ecu_seven_segment_cfg.h  \
 ECU_Layer/LED/ecu_led.h  \
-ECU_Layer/LED/ecu_led_cfg.h 
+ECU_Layer/LED/ecu_led_cfg.h  \
+ECU_Layer/DC_Motor/ecu_dc_motor.h  \
+ECU_Layer/DC_Motor/ecu_dc_motor_cfg.h 

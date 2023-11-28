@@ -22,10 +22,14 @@ ECU_Layer/KeyPad/ecu_keypad.h  \
 ECU_Layer/KeyPad/ecu_keypad_cfg.h  \
 ECU_Layer/Chr_LCD/ecu_chr_lcd.h  \
 ECU_Layer/Chr_LCD/ecu_chr_lcd_cfg.h  \
+ECU_Layer/RealTimeClockDS1307/RealTimeClockDS1307.h  \
+ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/hal_i2c.h  \
+ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h  \
+ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h  \
+ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h  \
+ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h  \
+ECU_Layer/RealTimeClockDS1307/../../MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart_cfg.h  \
 MCAL_Layer/Timer0/hal_timr0.h  \
-MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h  \
-MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h  \
-MCAL_Layer/Timer0/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h  \
 MCAL_Layer/Timer1/hal_timr1.h  \
 MCAL_Layer/Timer2/hal_timr2.h  \
 MCAL_Layer/Timer3/hal_timr3.h  \
@@ -34,7 +38,4 @@ MCAL_Layer/ADC/hal_adc.h  \
 MCAL_Layer/ADC/hal_adc_cfg.h  \
 MCAL_Layer/CCP/hal_ccp.h  \
 MCAL_Layer/CCP/ccp_cfg.h  \
-MCAL_Layer/usart/hal_usart.h  \
-MCAL_Layer/usart/hal_usart_cfg.h  \
-MCAL_Layer/SPI/hal_spi.h  \
-MCAL_Layer/I2C/hal_i2c.h 
+MCAL_Layer/SPI/hal_spi.h 

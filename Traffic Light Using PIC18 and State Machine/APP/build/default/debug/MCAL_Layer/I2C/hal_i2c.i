@@ -5172,20 +5172,85 @@ Std_ReturnType gpio_port_read_logic(port_index_t port, uint8 *logic);
 Std_ReturnType gpio_port_toggle_logic(port_index_t port);
 # 14 "MCAL_Layer/I2C/hal_i2c.h" 2
 
-# 1 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 1
-# 12 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h"
-# 1 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 1
-# 15 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
-# 1 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h" 1
-# 15 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 2
-# 54 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
+# 1 "MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h" 1
+# 13 "MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h"
+# 1 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 1
+# 12 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h"
+# 1 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 1
+# 15 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
+# 1 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h" 1
+# 15 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h" 2
+# 54 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_interrupt_config.h"
 typedef enum{
     INTERRUPT_LOW_PRIORITY = 0,
     INTERRUPT_HIGH_PRIORITY
 }interrupt_priority_cfg;
-# 12 "MCAL_Layer/I2C/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 2
+# 12 "MCAL_Layer/I2C/../../MCAL_Layer/usart/../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h" 2
+# 13 "MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h" 2
+
+# 1 "MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart_cfg.h" 1
+# 14 "MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h" 2
+# 61 "MCAL_Layer/I2C/../../MCAL_Layer/usart/hal_usart.h"
+typedef enum{
+    BAUDRATE_ASYN_8BIT_lOW_SPEED,
+    BAUDRATE_ASYN_8BIT_HIGH_SPEED,
+    BAUDRATE_ASYN_16BIT_lOW_SPEED,
+    BAUDRATE_ASYN_16BIT_HIGH_SPEED,
+    BAUDRATE_SYN_8BIT,
+    BAUDRATE_SYN_16BIT
+}baudrate_gen_t;
+
+typedef struct{
+    interrupt_priority_cfg usart_tx_int_priority;
+ uint8 usart_tx_enable : 1;
+ uint8 usart_tx_interrupt_enable : 1;
+ uint8 usart_tx_9bit_enable : 1;
+    uint8 usart_tx_reserved : 5;
+}usart_tx_cfg_t;
+
+typedef struct{
+    interrupt_priority_cfg usart_rx_int_priority;
+ uint8 usart_rx_enable : 1;
+ uint8 usart_rx_interrupt_enable : 1;
+ uint8 usart_rx_9bit_enable : 1;
+    uint8 usart_rx_reserved : 5;
+}usart_rx_cfg_t;
+
+typedef union{
+ struct{
+  uint8 usart_tx_reserved : 6;
+  uint8 usart_ferr : 1;
+  uint8 usart_oerr : 1;
+ };
+ uint8 status;
+}usart_error_status_t;
+
+typedef struct{
+    uint32 baudrate;
+    baudrate_gen_t baudrate_gen_gonfig;
+    usart_tx_cfg_t usart_tx_cfg;
+ usart_rx_cfg_t usart_rx_cfg;
+ usart_error_status_t error_status;
+ void (*EUSART_TxDefaultInterruptHandler)(void);
+    void (*EUSART_RxDefaultInterruptHandler)(void);
+    void (*EUSART_FramingErrorHandler)(void);
+    void (*EUSART_OverrunErrorHandler)(void);
+}usart_t;
+
+
+Std_ReturnType EUSART_ASYNC_Init(const usart_t *_eusart);
+Std_ReturnType EUSART_ASYNC_DeInit(const usart_t *_eusart);
+
+Std_ReturnType EUSART_ASYNC_ReadByteBlocking(uint8 *_data);
+Std_ReturnType EUSART_ASYNC_ReadByteNonBlocking(uint8 *_data);
+Std_ReturnType EUSART_ASYNC_RX_Restart(void);
+
+Std_ReturnType EUSART_ASYNC_WriteByteBlocking(uint8 _data);
+Std_ReturnType EUSART_ASYNC_WriteStringBlocking(uint8 *_data);
+Std_ReturnType EUSART_ASYNC_WriteByteNonBlocking(uint8 _data);
+Std_ReturnType EUSART_ASYNC_WriteStringNonBlocking(uint8 *_data);
 # 15 "MCAL_Layer/I2C/hal_i2c.h" 2
-# 77 "MCAL_Layer/I2C/hal_i2c.h"
+# 78 "MCAL_Layer/I2C/hal_i2c.h"
 typedef struct{
  uint8 i2c_mode_cfg;
     uint8 i2c_slave_address;
@@ -5224,6 +5289,9 @@ Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ac
 
 Std_ReturnType MSSP_I2C_Master_Write_NBlocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack);
 Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data);
+
+Std_ReturnType MSSP_I2C_EXT_Device_Write_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 _data, uint8 *slave_ack);
+Std_ReturnType MSSP_I2C_EXT_Device_Read_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 *_data, uint8 *slave_ack);
 # 8 "MCAL_Layer/I2C/hal_i2c.c" 2
 
 
@@ -5464,7 +5532,7 @@ Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ac
 }
 
 Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data){
-     Std_ReturnType ret = (Std_ReturnType)0x01;
+    Std_ReturnType ret = (Std_ReturnType)0x01;
     if((((void*)0) == i2c_obj) || (((void*)0) == i2c_data)){
         ret = (Std_ReturnType)0x00;
     }
@@ -5496,6 +5564,38 @@ Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 a
 
     }
     return ret;
+}
+# 289 "MCAL_Layer/I2C/hal_i2c.c"
+Std_ReturnType MSSP_I2C_EXT_Device_Write_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 _data, uint8 *slave_ack){
+    Std_ReturnType ret = (Std_ReturnType)0x00;
+    if((((void*)0) == i2c_obj) || (((void*)0) == slave_ack)){
+        ret = (Std_ReturnType)0x00;
+    }
+    else{
+        ret = MSSP_I2C_Master_Send_Start(&i2c_obj);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, slave_add, &slave_ack);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, byte_address, &slave_ack);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, _data, &slave_ack);
+        ret = MSSP_I2C_Master_Send_Stop(&i2c_obj);
+        _delay((unsigned long)((1)*(8000000UL/4000.0)));
+    }
+}
+# 312 "MCAL_Layer/I2C/hal_i2c.c"
+Std_ReturnType MSSP_I2C_EXT_Device_Read_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 *_data, uint8 *slave_ack){
+    Std_ReturnType ret = (Std_ReturnType)0x01;
+    if((((void*)0) == i2c_obj) || (((void*)0) == _data) || (((void*)0) == slave_ack)){
+        ret = (Std_ReturnType)0x00;
+    }
+    else{
+        ret = MSSP_I2C_Master_Send_Start(&i2c_obj);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, slave_add, &slave_ack);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, byte_address, &slave_ack);
+        ret = MSSP_I2C_Master_Send_Repeated_Start(&i2c_obj);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, (slave_add | 0x01 ), &slave_ack);
+        ret = MSSP_I2C_Master_Read_Blocking(&i2c_obj, 1, _data);
+        ret = MSSP_I2C_Master_Send_Stop(&i2c_obj);
+        _delay((unsigned long)((1)*(8000000UL/4000.0)));
+    }
 }
 
 void MSSP_I2C_ISR(void){
@@ -5540,7 +5640,7 @@ static __attribute__((inline)) void MSSP_I2C_Interrupt_Configurations(const mssp
         I2C_Report_Write_Collision_InterruptHandler = i2c_obj->I2C_Report_Write_Collision;
         I2C_DefaultInterruptHandle = i2c_obj->I2C_DefaultInterruptHandler;
         I2C_Report_Receive_Overflow_InterruptHandle = i2c_obj->I2C_Report_Receive_Overflow;
-# 350 "MCAL_Layer/I2C/hal_i2c.c"
+# 398 "MCAL_Layer/I2C/hal_i2c.c"
         (INTCONbits.GIE = 1);
         (INTCONbits.PEIE = 1);
 

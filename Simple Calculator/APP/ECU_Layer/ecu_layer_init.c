@@ -101,20 +101,12 @@ chr_lcd_4bit_t lcd_1 = {
     .lcd_data[0].pin = GPIO_PIN2,
     .lcd_data[0].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[0].logic = GPIO_LOW,
-    //.lcd_data[1].port = PORTC_INDEX,
-    //.lcd_data[1].pin = GPIO_PIN3,
-    //.lcd_data[1].direction = GPIO_DIRECTION_OUTPUT,
-    //.lcd_data[1].logic = GPIO_LOW,
-    //.lcd_data[2].port = PORTC_INDEX,
-    //.lcd_data[2].pin = GPIO_PIN4,
-    //.lcd_data[2].direction = GPIO_DIRECTION_OUTPUT,
-    //.lcd_data[2].logic = GPIO_LOW,
-     .lcd_data[1].port = PORTD_INDEX,
-    .lcd_data[1].pin = GPIO_PIN6,
+    .lcd_data[1].port = PORTC_INDEX,
+    .lcd_data[1].pin = GPIO_PIN3,
     .lcd_data[1].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[1].logic = GPIO_LOW,
-    .lcd_data[2].port = PORTD_INDEX,
-    .lcd_data[2].pin = GPIO_PIN7,
+    .lcd_data[2].port = PORTC_INDEX,
+    .lcd_data[2].pin = GPIO_PIN4,
     .lcd_data[2].direction = GPIO_DIRECTION_OUTPUT,
     .lcd_data[2].logic = GPIO_LOW,
     .lcd_data[3].port = PORTC_INDEX,
@@ -235,7 +227,7 @@ void ecu_layer_init(void){
     //ret = led_initialize(&ready_yellow);
     //ret = dc_motor_initialize(&dc_motor_1);
     //ret = dc_motor_initialize(&dc_motor_2);
-    //ret = lcd_4bit_intialize(&lcd_1);
-    //ret = keypad_initialize(&keypad1);
+    ret = lcd_4bit_intialize(&lcd_1);
+    ret = keypad_initialize(&keypad1);
 
 }

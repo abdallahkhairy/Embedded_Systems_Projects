@@ -137,5 +137,5 @@ void Int0_APP_ISR(void) { TIMER0_MODULE_ENABLE(); }
 void Int1_APP_ISR(void) { TIMER0_MODULE_DISABLE(); }
 void Int2_APP_ISR(void) {
   seconds = 0, minutes = 0, hours = 0;
-  TIMER0_MODULE_ENABLE();
+  TIMER0_MODULE_DISABLE();
 }

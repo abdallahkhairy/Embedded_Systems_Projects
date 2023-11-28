@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\dat\20230323171731_en.msgs \
   -cn -h+dist/default/debug\APP.debug.sym \
   --cmf=dist/default/debug\APP.debug.cmf -z -Q18F4620 \
-  -oC:\Users\user\AppData\Local\Temp\xcAs124c.\driver_tmp_3.o \
+  -oC:\Users\user\AppData\Local\Temp\xcAsu2c.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/debug/APP.debug.map \
-  --md=C:\Users\user\AppData\Local\Temp\xcAs124c.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\user\AppData\Local\Temp\xcAsu2c.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh \
   -ASMALLCONST=01000h-010FFhx240 -AMEDIUMCONST=01000h-0FFFFh \
   -ACOMRAM=01h-07Fh -AABS1=00h-0F7Fh -ABIGRAM=01h-0F7Fh \
@@ -28,7 +28,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\user\AppData\Local\Temp\xcAs124c.\driver_tmp_14.o \
+  C:\Users\user\AppData\Local\Temp\xcAsu2c.\driver_tmp_14.o \
   dist/default/debug\APP.debug.o 
 
 Object code version is 3.11
@@ -38,7 +38,7 @@ Machine type is 18F4620
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\user\AppData\Local\Temp\xcAs124c.\driver_tmp_14.o
+C:\Users\user\AppData\Local\Temp\xcAsu2c.\driver_tmp_14.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  E        E        4        4       0
@@ -443,10 +443,10 @@ _CCP_Init                                          text31       00392E
 _CCP_Interrupt_Config                              text36       004950
 _CCP_Mode_Timer_Select                             text39       004454
 _CCP_PWM_Mode_Config                               text35       002882
-_CCP_PWM_Mode_Config$5742                          cstackBANK0  0000EC
-_CCP_PWM_Mode_Config$5743                          cstackBANK0  0000F0
+_CCP_PWM_Mode_Config$5764                          cstackBANK0  0000EC
+_CCP_PWM_Mode_Config$5765                          cstackBANK0  0000F0
 _CCP_PWM_Set_Duty                                  text44       002C0E
-_CCP_PWM_Set_Duty$5741                             cstackBANK1  00017F
+_CCP_PWM_Set_Duty$5763                             cstackBANK1  00017F
 _CCP_PWM_Start                                     text43       004598
 _EEADR                                             (abs)        000FA9
 _EEADRH                                            (abs)        000FAA
@@ -1118,7 +1118,7 @@ _dc_motor_initialize                               text29       004912
 _dc_motor_move_right                               text9        0047C0
 _dc_motor_stop                                     text8        00477A
 _dtoa                                              text14       002DAE
-_dtoa$5169                                         cstackCOMRAM 00002D
+_dtoa$5190                                         cstackCOMRAM 00002D
 _ecu_layer_init                                    text24       004B2C
 _flags                                             bssBANK0     0000C0
 _fputc                                             text17       003C10
@@ -1141,15 +1141,15 @@ _lm35_res1                                         bssBANK0     0000C2
 _lm35_res1_Celsius                                 nvBANK0      0000FE
 _lm35_res1_str                                     bssBANK1     000179
 _main                                              text0        002536
-_main$5745                                         cstackBANK1  000186
+_main$5767                                         cstackBANK1  000186
 _memset                                            text22       002F44
 _pad                                               text15       0042F6
 _port_registers                                    dataBANK1    000100
 _prec                                              bssBANK0     000086
 _putch                                             text18       004C16
 _roundf                                            text1        001DE8
-_roundf$5746                                       cstackBANK0  0000D6
-_roundf$5747                                       cstackBANK0  0000D0
+_roundf$5768                                       cstackBANK0  0000D6
+_roundf$5769                                       cstackBANK0  0000D0
 _seg1                                              dataBANK1    000130
 _select_result_format                              text41       00484A
 _sprintf                                           text11       00469C

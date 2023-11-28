@@ -93,6 +93,7 @@ wtemp8 73 0 COMRAM 1
 __Hconfig 30000E 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
 dc_motor_initialize@ret 1E 0 COMRAM 1
+_dtoa$5190 2D 0 COMRAM 1
 dtoa@d 2B 0 COMRAM 1
 ?___awmod E 0 COMRAM 1
 dtoa@i 34 0 COMRAM 1
@@ -134,7 +135,6 @@ _ADC_Init 3E62 0 CODE 0
 ___xxtofl 2A5A 0 CODE 0
 _CCP_Init 392E 0 CODE 0
 __end_of_abs 4912 0 CODE 0
-_main$5745 186 0 BANK1 1
 ___flge@ff2 12 0 COMRAM 1
 __end_of_ADC_StartConversion_Interrupt 48D2 0 CODE 0
 _EECON2 FA7 0 ABS 0
@@ -172,6 +172,7 @@ __Lintret 0 0 ABS 0
 __Hramtop 1000 0 RAM 0
 __Lramtop 1000 0 RAM 0
 __Hstruct 0 0 COMRAM 1
+_main$5767 186 0 BANK1 1
 __Lstruct 0 0 COMRAM 1
 __Hbigdata 0 0 BIGRAM 1
 __Lbigdata 0 0 BIGRAM 1
@@ -180,7 +181,6 @@ __Lmediumconst 0 0 MEDIUMCONST 0
 _SPBRGH FB0 0 ABS 0
 _EEADRH FAA 0 ABS 0
 __Hfarbss 0 0 FARRAM 0
-_dtoa$5169 2D 0 COMRAM 1
 __Lfarbss 0 0 FARRAM 0
 __Hintcode E 0 CODE 0
 _SSPBUF FC9 0 ABS 0
@@ -402,10 +402,8 @@ __ptext8 477A 0 CODE 0
 __ptext9 47C0 0 CODE 0
 __pcstackBANK1 17F 0 BANK1 1
 _vfpfcnvrt 34A6 0 CODE 0
-_CCP_PWM_Mode_Config$5742 EC 0 BANK0 1
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-_CCP_PWM_Mode_Config$5743 F0 0 BANK0 1
 _CCP1_InterruptHandler BC 0 BANK0 1
 _CCP2_InterruptHandler BA 0 BANK0 1
 _INT0_InterruptHandler B2 0 BANK0 1
@@ -418,10 +416,12 @@ _TMR3_InterruptHandler 92 0 BANK0 1
 __end_of_CCP_Init 3A34 0 CODE 0
 Timer2_Init@ret 11 0 COMRAM 1
 __end_of_ADC_GetConversionResult 3E62 0 CODE 0
+_CCP_PWM_Mode_Config$5764 EC 0 BANK0 1
 _RB4_InterruptHandler_HIGH AC 0 BANK0 1
 _RB5_InterruptHandler_HIGH A8 0 BANK0 1
 _RB6_InterruptHandler_HIGH A4 0 BANK0 1
 _RB7_InterruptHandler_HIGH A0 0 BANK0 1
+_CCP_PWM_Mode_Config$5765 F0 0 BANK0 1
 MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations@F3596 6B 0 COMRAM 1
 MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations@F3598 6A 0 COMRAM 1
 __end_of_btn_values 1011 0 SMALLCONST 0
@@ -544,7 +544,6 @@ __Lbank13 0 0 ABS 0
 __HbssBANK1 0 0 ABS 0
 __LbssBANK1 0 0 ABS 0
 ___xxtofl@arg 18 0 COMRAM 1
-_roundf$5746 D6 0 BANK0 1
 __Hbank14 0 0 ABS 0
 __pbssBANK1 14D 0 BANK1 1
 __Lbank14 0 0 ABS 0
@@ -705,7 +704,6 @@ __ptext17 3C10 0 CODE 0
 __ptext36 4950 0 CODE 0
 __ptext55 4BAE 0 CODE 0
 __ptext74 4B10 0 CODE 0
-_roundf$5747 D0 0 BANK0 1
 lcd_4bit_send_command@ret 1F 0 COMRAM 1
 ___awmod@divisor 10 0 COMRAM 1
 __Htext75 0 0 ABS 0
@@ -805,6 +803,7 @@ CCP_Compare_Mode_Config@ret 15 0 COMRAM 1
 CCP_PWM_Set_Duty@_ccp_obj EA 0 BANK0 1
 gpio_pin_intialize@ret 1B 0 COMRAM 1
 vfpfcnvrt@ap 3A 0 COMRAM 1
+_roundf$5768 D6 0 BANK0 1
 __accesstop 80 0 ABS 0
 __end_of_INT0_ISR 4C0E 0 CODE 0
 _EUSART_RxInterruptHandler 8C 0 BANK0 1
@@ -831,6 +830,7 @@ intlevel3 0 0 CODE 0
 __end_of_vfprintf 464E 0 CODE 0
 CCP_PWM_Set_Duty@_duty EC 0 BANK0 1
 vfpfcnvrt@cp 42 0 COMRAM 1
+_roundf$5769 D0 0 BANK0 1
 _lcd_4bit_intialize 36FE 0 CODE 0
 _CCP1_ISR 4C12 0 CODE 0
 _CCP2_ISR 4A32 0 CODE 0
@@ -895,7 +895,7 @@ _SPI_InterruptHandler 9C 0 BANK0 1
 ___awmod@counter 12 0 COMRAM 1
 ___flmul@a 20 0 COMRAM 1
 ___fldiv@a 39 0 COMRAM 1
-_CCP_PWM_Set_Duty$5741 17F 0 BANK1 1
+_CCP_PWM_Set_Duty$5763 17F 0 BANK1 1
 ___flmul@b 1C 0 COMRAM 1
 ___fldiv@b 35 0 COMRAM 1
 __end_of_INT2_ISR 4C06 0 CODE 0
@@ -915,7 +915,7 @@ text11 469C 4BEA CODE 469C 0
 text56 4BEC 4C17 CODE 4BEC 0
 %locals
 dist/default/debug\APP.debug.o
-C:\Users\user\AppData\Local\Temp\xcAs124c.\driver_tmp_1.s
+C:\Users\user\AppData\Local\Temp\xcAsu2c.\driver_tmp_1.s
 7395 4270 0 CODE 0
 7397 4270 0 CODE 0
 7400 4270 0 CODE 0
@@ -2063,7 +2063,7 @@ MCAL_Layer/ADC/hal_adc.c
 269 3BFC 0 CODE 0
 269 3C04 0 CODE 0
 270 3C0E 0 CODE 0
-C:\Users\user\AppData\Local\Temp\xcAs124c.\driver_tmp_1.s
+C:\Users\user\AppData\Local\Temp\xcAsu2c.\driver_tmp_1.s
 21235 8 0 CODE 0
 MCAL_Layer/Interrupt/mcal_interrupt_manager.c
 32 8 0 CODE 0
@@ -2199,13 +2199,13 @@ MCAL_Layer/SPI/hal_spi.c
 133 4BF6 0 CODE 0
 138 4BF8 0 CODE 0
 MCAL_Layer/I2C/hal_i2c.c
-281 4BFA 0 CODE 0
-283 4BFA 0 CODE 0
-288 4BFC 0 CODE 0
+329 4BFA 0 CODE 0
+331 4BFA 0 CODE 0
+336 4BFC 0 CODE 0
 MCAL_Layer/I2C/hal_i2c.c
-290 4BFE 0 CODE 0
-292 4BFE 0 CODE 0
-297 4C00 0 CODE 0
+338 4BFE 0 CODE 0
+340 4BFE 0 CODE 0
+345 4C00 0 CODE 0
 MCAL_Layer/Interrupt/mcal_external_interrupt.c
 95 4C02 0 CODE 0
 97 4C02 0 CODE 0

@@ -1,25 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F3586 `(v ~T0 @X0 0 tf ]
-[v F3587 `(v ~T0 @X0 0 tf ]
-[v F3589 `(v ~T0 @X0 0 tf ]
-[v F3590 `(v ~T0 @X0 0 tf ]
-[v F3592 `(v ~T0 @X0 0 tf ]
-[v F3593 `(v ~T0 @X0 0 tf ]
+[v F3660 `(v ~T0 @X0 0 tf ]
+[v F3661 `(v ~T0 @X0 0 tf ]
+[v F3663 `(v ~T0 @X0 0 tf ]
+[v F3664 `(v ~T0 @X0 0 tf ]
+[v F3666 `(v ~T0 @X0 0 tf ]
+[v F3667 `(v ~T0 @X0 0 tf ]
 "21 MCAL_Layer/I2C/hal_i2c.c
 [; ;MCAL_Layer/I2C/hal_i2c.c: 21: Std_ReturnType MSSP_I2C_Init(const mssp_i2c_t *i2c_obj){
 [c E3522 0 1 .. ]
 [n E3522 . INTERRUPT_LOW_PRIORITY INTERRUPT_HIGH_PRIORITY  ]
-"77 MCAL_Layer/I2C/hal_i2c.h
-[; ;MCAL_Layer/I2C/hal_i2c.h: 77: typedef struct{
-[s S274 `uc 1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 `E3522 1 `E3522 1 ]
-[n S274 . i2c_mode_cfg i2c_slave_address i2c_mode i2c_slew_rate i2c_SMBus_control i2c_general_call i2c_master_rec_mode i2c_reserved mssp_i2c_priority mssp_i2c_bc_priority ]
-[v F3542 `(v ~T0 @X0 0 tf ]
-[v F3544 `(v ~T0 @X0 0 tf ]
-[v F3546 `(v ~T0 @X0 0 tf ]
-"92
-[; ;MCAL_Layer/I2C/hal_i2c.h: 92: typedef struct{
-[s S275 `ul 1 `S274 1 `*F3542 1 `*F3544 1 `*F3546 1 ]
-[n S275 . i2c_clock i2c_cfg I2C_Report_Write_Collision I2C_DefaultInterruptHandler I2C_Report_Receive_Overflow ]
+"78 MCAL_Layer/I2C/hal_i2c.h
+[; ;MCAL_Layer/I2C/hal_i2c.h: 78: typedef struct{
+[s S279 `uc 1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 `E3522 1 `E3522 1 ]
+[n S279 . i2c_mode_cfg i2c_slave_address i2c_mode i2c_slew_rate i2c_SMBus_control i2c_general_call i2c_master_rec_mode i2c_reserved mssp_i2c_priority mssp_i2c_bc_priority ]
+[v F3604 `(v ~T0 @X0 0 tf ]
+[v F3606 `(v ~T0 @X0 0 tf ]
+[v F3608 `(v ~T0 @X0 0 tf ]
+"93
+[; ;MCAL_Layer/I2C/hal_i2c.h: 93: typedef struct{
+[s S280 `ul 1 `S279 1 `*F3604 1 `*F3606 1 `*F3608 1 ]
+[n S280 . i2c_clock i2c_cfg I2C_Report_Write_Collision I2C_DefaultInterruptHandler I2C_Report_Receive_Overflow ]
 "4737 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 4737:     struct {
 [s S185 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -35,10 +35,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4751
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 4751: extern volatile SSPCON1bits_t SSPCON1bits __attribute__((address(0xFC6)));
 [v _SSPCON1bits `VS184 ~T0 @X0 0 e@4038 ]
-[v F3577 `(v ~T0 @X0 1 tf1`*CS275 ]
+[v F3651 `(v ~T0 @X0 1 tf1`*CS280 ]
 "11 MCAL_Layer/I2C/hal_i2c.c
 [; ;MCAL_Layer/I2C/hal_i2c.c: 11: static __attribute__((inline)) void I2C_Master_Mode_Clock_Configurations(const mssp_i2c_t *i2c_obj);
-[v _I2C_Master_Mode_Clock_Configurations `TF3577 ~T0 @X0 0 s ]
+[v _I2C_Master_Mode_Clock_Configurations `TF3651 ~T0 @X0 0 s ]
 "4675 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 4675:     struct {
 [s S183 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -53,14 +53,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5022
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 5022: extern volatile unsigned char SSPADD __attribute__((address(0xFC8)));
 [v _SSPADD `Vuc ~T0 @X0 0 e@4040 ]
-[v F3580 `(v ~T0 @X0 1 tf1`*CS275 ]
+[v F3654 `(v ~T0 @X0 1 tf1`*CS280 ]
 "12 MCAL_Layer/I2C/hal_i2c.c
 [; ;MCAL_Layer/I2C/hal_i2c.c: 12: static __attribute__((inline)) void I2C_Slave_Mode_Configurations(const mssp_i2c_t *i2c_obj);
-[v _I2C_Slave_Mode_Configurations `TF3580 ~T0 @X0 0 s ]
-[v F3575 `(v ~T0 @X0 1 tf ]
+[v _I2C_Slave_Mode_Configurations `TF3654 ~T0 @X0 0 s ]
+[v F3649 `(v ~T0 @X0 1 tf ]
 "10
 [; ;MCAL_Layer/I2C/hal_i2c.c: 10: static __attribute__((inline)) void MSSP_I2C_Mode_GPIO_CFG(void);
-[v _MSSP_I2C_Mode_GPIO_CFG `TF3575 ~T0 @X0 0 s ]
+[v _MSSP_I2C_Mode_GPIO_CFG `TF3649 ~T0 @X0 0 s ]
 "4807 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 4807:     struct {
 [s S188 :2 `uc 1 :1 `uc 1 ]
@@ -116,10 +116,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4877
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 4877: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0xFC7)));
 [v _SSPSTATbits `VS187 ~T0 @X0 0 e@4039 ]
-[v F3583 `(v ~T0 @X0 1 tf1`*CS275 ]
+[v F3657 `(v ~T0 @X0 1 tf1`*CS280 ]
 "13 MCAL_Layer/I2C/hal_i2c.c
 [; ;MCAL_Layer/I2C/hal_i2c.c: 13: static __attribute__((inline)) void MSSP_I2C_Interrupt_Configurations(const mssp_i2c_t *i2c_obj);
-[v _MSSP_I2C_Interrupt_Configurations `TF3583 ~T0 @X0 0 s ]
+[v _MSSP_I2C_Interrupt_Configurations `TF3657 ~T0 @X0 0 s ]
 "2503 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 2503:     struct {
 [s S86 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -168,8 +168,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5029
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 5029: extern volatile unsigned char SSPBUF __attribute__((address(0xFC9)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
-[v F3630 `(v ~T0 @X0 0 tf ]
-"2800
+[v F3432 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
+[v __delay `JF3432 ~T0 @X0 0 e ]
+[p i __delay ]
+[v F3718 `(v ~T0 @X0 0 tf ]
+"2800 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 2800:     struct {
 [s S98 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S98 . CCP2IF TMR3IF HLVDIF BCLIF EEIF . CMIF OSCFIF ]
@@ -184,7 +188,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2815
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 2815: extern volatile PIR2bits_t PIR2bits __attribute__((address(0xFA1)));
 [v _PIR2bits `VS97 ~T0 @X0 0 e@4001 ]
-[v F3632 `(v ~T0 @X0 0 tf ]
+[v F3720 `(v ~T0 @X0 0 tf ]
 "1835
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1835:     struct {
 [s S65 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -632,28 +636,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 0FFFh ;# ">
 "16 MCAL_Layer/I2C/hal_i2c.c
 [; ;MCAL_Layer/I2C/hal_i2c.c: 16: static void (*I2C_Report_Write_Collision_InterruptHandler)(void) = ((void*)0);
-[v _I2C_Report_Write_Collision_InterruptHandler `*F3586 ~T0 @X0 1 s ]
+[v _I2C_Report_Write_Collision_InterruptHandler `*F3660 ~T0 @X0 1 s ]
 [i _I2C_Report_Write_Collision_InterruptHandler
--> -> -> 0 `i `*v `*F3587
+-> -> -> 0 `i `*v `*F3661
 ]
 "17
 [; ;MCAL_Layer/I2C/hal_i2c.c: 17: static void (*I2C_DefaultInterruptHandle)(void) = ((void*)0);
-[v _I2C_DefaultInterruptHandle `*F3589 ~T0 @X0 1 s ]
+[v _I2C_DefaultInterruptHandle `*F3663 ~T0 @X0 1 s ]
 [i _I2C_DefaultInterruptHandle
--> -> -> 0 `i `*v `*F3590
+-> -> -> 0 `i `*v `*F3664
 ]
 "18
 [; ;MCAL_Layer/I2C/hal_i2c.c: 18: static void (*I2C_Report_Receive_Overflow_InterruptHandle)(void) = ((void*)0);
-[v _I2C_Report_Receive_Overflow_InterruptHandle `*F3592 ~T0 @X0 1 s ]
+[v _I2C_Report_Receive_Overflow_InterruptHandle `*F3666 ~T0 @X0 1 s ]
 [i _I2C_Report_Receive_Overflow_InterruptHandle
--> -> -> 0 `i `*v `*F3593
+-> -> -> 0 `i `*v `*F3667
 ]
 "21
 [; ;MCAL_Layer/I2C/hal_i2c.c: 21: Std_ReturnType MSSP_I2C_Init(const mssp_i2c_t *i2c_obj){
-[v _MSSP_I2C_Init `(uc ~T0 @X0 1 ef1`*CS275 ]
+[v _MSSP_I2C_Init `(uc ~T0 @X0 1 ef1`*CS280 ]
 {
 [e :U _MSSP_I2C_Init ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
 "22
 [; ;MCAL_Layer/I2C/hal_i2c.c: 22:     Std_ReturnType ret = (Std_ReturnType)0x01;
@@ -661,7 +665,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "23
 [; ;MCAL_Layer/I2C/hal_i2c.c: 23:     if(((void*)0) == i2c_obj){
-[e $ ! == -> -> -> 0 `i `*v `*CS275 _i2c_obj 277  ]
+[e $ ! == -> -> -> 0 `i `*v `*CS280 _i2c_obj 282  ]
 {
 "24
 [; ;MCAL_Layer/I2C/hal_i2c.c: 24:         ret = (Std_ReturnType)0x00;
@@ -669,17 +673,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "25
 [; ;MCAL_Layer/I2C/hal_i2c.c: 25:     }
 }
-[e $U 278  ]
+[e $U 283  ]
 "26
 [; ;MCAL_Layer/I2C/hal_i2c.c: 26:     else{
-[e :U 277 ]
+[e :U 282 ]
 {
 "28
 [; ;MCAL_Layer/I2C/hal_i2c.c: 28:         (SSPCON1bits.SSPEN = 0);
 [e = . . _SSPCON1bits 0 2 -> -> 0 `i `uc ]
 "30
 [; ;MCAL_Layer/I2C/hal_i2c.c: 30:         if(1 == i2c_obj->i2c_cfg.i2c_mode){
-[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 2 `i 279  ]
+[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 2 `i 284  ]
 {
 "32
 [; ;MCAL_Layer/I2C/hal_i2c.c: 32:             I2C_Master_Mode_Clock_Configurations(i2c_obj);
@@ -687,15 +691,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;MCAL_Layer/I2C/hal_i2c.c: 33:         }
 }
-[e $U 280  ]
+[e $U 285  ]
 "34
 [; ;MCAL_Layer/I2C/hal_i2c.c: 34:         else if(0 == i2c_obj->i2c_cfg.i2c_mode){
-[e :U 279 ]
-[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 2 `i 281  ]
+[e :U 284 ]
+[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 2 `i 286  ]
 {
 "36
 [; ;MCAL_Layer/I2C/hal_i2c.c: 36:             if(1 == i2c_obj->i2c_cfg.i2c_general_call){
-[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 5 `i 282  ]
+[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 5 `i 287  ]
 {
 "37
 [; ;MCAL_Layer/I2C/hal_i2c.c: 37:                 (SSPCON2bits.GCEN = 1);
@@ -703,11 +707,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38
 [; ;MCAL_Layer/I2C/hal_i2c.c: 38:             }
 }
-[e $U 283  ]
+[e $U 288  ]
 "39
 [; ;MCAL_Layer/I2C/hal_i2c.c: 39:             else if(0 == i2c_obj->i2c_cfg.i2c_general_call){
-[e :U 282 ]
-[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 5 `i 284  ]
+[e :U 287 ]
+[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 5 `i 289  ]
 {
 "40
 [; ;MCAL_Layer/I2C/hal_i2c.c: 40:                 (SSPCON2bits.GCEN = 0);
@@ -715,14 +719,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;MCAL_Layer/I2C/hal_i2c.c: 41:             }
 }
-[e $U 285  ]
+[e $U 290  ]
 "42
 [; ;MCAL_Layer/I2C/hal_i2c.c: 42:             else { }
-[e :U 284 ]
+[e :U 289 ]
 {
 }
-[e :U 285 ]
-[e :U 283 ]
+[e :U 290 ]
+[e :U 288 ]
 "44
 [; ;MCAL_Layer/I2C/hal_i2c.c: 44:             SSPCON1bits.WCOL = 0;
 [e = . . _SSPCON1bits 0 4 -> -> 0 `i `uc ]
@@ -741,20 +745,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;MCAL_Layer/I2C/hal_i2c.c: 53:         }
 }
-[e $U 286  ]
+[e $U 291  ]
 "54
 [; ;MCAL_Layer/I2C/hal_i2c.c: 54:         else { }
-[e :U 281 ]
+[e :U 286 ]
 {
 }
-[e :U 286 ]
-[e :U 280 ]
+[e :U 291 ]
+[e :U 285 ]
 "56
 [; ;MCAL_Layer/I2C/hal_i2c.c: 56:         MSSP_I2C_Mode_GPIO_CFG();
 [e ( _MSSP_I2C_Mode_GPIO_CFG ..  ]
 "58
 [; ;MCAL_Layer/I2C/hal_i2c.c: 58:         if(1 == i2c_obj->i2c_cfg.i2c_slew_rate){
-[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 3 `i 287  ]
+[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 3 `i 292  ]
 {
 "59
 [; ;MCAL_Layer/I2C/hal_i2c.c: 59:             (SSPSTATbits.SMP = 1);
@@ -762,11 +766,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60
 [; ;MCAL_Layer/I2C/hal_i2c.c: 60:         }
 }
-[e $U 288  ]
+[e $U 293  ]
 "61
 [; ;MCAL_Layer/I2C/hal_i2c.c: 61:         else if(0 == i2c_obj->i2c_cfg.i2c_slew_rate){
-[e :U 287 ]
-[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 3 `i 289  ]
+[e :U 292 ]
+[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 3 `i 294  ]
 {
 "62
 [; ;MCAL_Layer/I2C/hal_i2c.c: 62:             (SSPSTATbits.SMP = 0);
@@ -774,17 +778,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63
 [; ;MCAL_Layer/I2C/hal_i2c.c: 63:         }
 }
-[e $U 290  ]
+[e $U 295  ]
 "64
 [; ;MCAL_Layer/I2C/hal_i2c.c: 64:         else { }
-[e :U 289 ]
+[e :U 294 ]
 {
 }
-[e :U 290 ]
-[e :U 288 ]
+[e :U 295 ]
+[e :U 293 ]
 "66
 [; ;MCAL_Layer/I2C/hal_i2c.c: 66:         if(1 == i2c_obj->i2c_cfg.i2c_SMBus_control){
-[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 4 `i 291  ]
+[e $ ! == -> 1 `i -> . . *U _i2c_obj 1 4 `i 296  ]
 {
 "67
 [; ;MCAL_Layer/I2C/hal_i2c.c: 67:             (SSPSTATbits.CKE = 1);
@@ -792,11 +796,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68
 [; ;MCAL_Layer/I2C/hal_i2c.c: 68:         }
 }
-[e $U 292  ]
+[e $U 297  ]
 "69
 [; ;MCAL_Layer/I2C/hal_i2c.c: 69:         else if(0 == i2c_obj->i2c_cfg.i2c_SMBus_control){
-[e :U 291 ]
-[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 4 `i 293  ]
+[e :U 296 ]
+[e $ ! == -> 0 `i -> . . *U _i2c_obj 1 4 `i 298  ]
 {
 "70
 [; ;MCAL_Layer/I2C/hal_i2c.c: 70:             (SSPSTATbits.CKE = 0);
@@ -804,14 +808,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71
 [; ;MCAL_Layer/I2C/hal_i2c.c: 71:         }
 }
-[e $U 294  ]
+[e $U 299  ]
 "72
 [; ;MCAL_Layer/I2C/hal_i2c.c: 72:         else { }
-[e :U 293 ]
+[e :U 298 ]
 {
 }
-[e :U 294 ]
-[e :U 292 ]
+[e :U 299 ]
+[e :U 297 ]
 "75
 [; ;MCAL_Layer/I2C/hal_i2c.c: 75:       MSSP_I2C_Interrupt_Configurations(i2c_obj);
 [e ( _MSSP_I2C_Interrupt_Configurations (1 _i2c_obj ]
@@ -821,21 +825,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80
 [; ;MCAL_Layer/I2C/hal_i2c.c: 80:     }
 }
-[e :U 278 ]
+[e :U 283 ]
 "81
 [; ;MCAL_Layer/I2C/hal_i2c.c: 81:     return ret;
 [e ) _ret ]
-[e $UE 276  ]
+[e $UE 281  ]
 "82
 [; ;MCAL_Layer/I2C/hal_i2c.c: 82: }
-[e :UE 276 ]
+[e :UE 281 ]
 }
 "84
 [; ;MCAL_Layer/I2C/hal_i2c.c: 84: Std_ReturnType MSSP_I2C_DeInit(const mssp_i2c_t *i2c_obj){
-[v _MSSP_I2C_DeInit `(uc ~T0 @X0 1 ef1`*CS275 ]
+[v _MSSP_I2C_DeInit `(uc ~T0 @X0 1 ef1`*CS280 ]
 {
 [e :U _MSSP_I2C_DeInit ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
 "85
 [; ;MCAL_Layer/I2C/hal_i2c.c: 85:     Std_ReturnType ret = (Std_ReturnType)0x01;
@@ -843,7 +847,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "86
 [; ;MCAL_Layer/I2C/hal_i2c.c: 86:     if(((void*)0) == i2c_obj){
-[e $ ! == -> -> -> 0 `i `*v `*CS275 _i2c_obj 296  ]
+[e $ ! == -> -> -> 0 `i `*v `*CS280 _i2c_obj 301  ]
 {
 "87
 [; ;MCAL_Layer/I2C/hal_i2c.c: 87:         ret = (Std_ReturnType)0x00;
@@ -851,10 +855,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "88
 [; ;MCAL_Layer/I2C/hal_i2c.c: 88:     }
 }
-[e $U 297  ]
+[e $U 302  ]
 "89
 [; ;MCAL_Layer/I2C/hal_i2c.c: 89:     else{
-[e :U 296 ]
+[e :U 301 ]
 {
 "91
 [; ;MCAL_Layer/I2C/hal_i2c.c: 91:         (SSPCON1bits.SSPEN = 0);
@@ -868,21 +872,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "98
 [; ;MCAL_Layer/I2C/hal_i2c.c: 98:     }
 }
-[e :U 297 ]
+[e :U 302 ]
 "99
 [; ;MCAL_Layer/I2C/hal_i2c.c: 99:     return ret;
 [e ) _ret ]
-[e $UE 295  ]
+[e $UE 300  ]
 "100
 [; ;MCAL_Layer/I2C/hal_i2c.c: 100: }
-[e :UE 295 ]
+[e :UE 300 ]
 }
 "102
 [; ;MCAL_Layer/I2C/hal_i2c.c: 102: Std_ReturnType MSSP_I2C_Master_Send_Start(const mssp_i2c_t *i2c_obj){
-[v _MSSP_I2C_Master_Send_Start `(uc ~T0 @X0 1 ef1`*CS275 ]
+[v _MSSP_I2C_Master_Send_Start `(uc ~T0 @X0 1 ef1`*CS280 ]
 {
 [e :U _MSSP_I2C_Master_Send_Start ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
 "103
 [; ;MCAL_Layer/I2C/hal_i2c.c: 103:     Std_ReturnType ret = (Std_ReturnType)0x01;
@@ -890,7 +894,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "104
 [; ;MCAL_Layer/I2C/hal_i2c.c: 104:     if(((void*)0) == i2c_obj){
-[e $ ! == -> -> -> 0 `i `*v `*CS275 _i2c_obj 299  ]
+[e $ ! == -> -> -> 0 `i `*v `*CS280 _i2c_obj 304  ]
 {
 "105
 [; ;MCAL_Layer/I2C/hal_i2c.c: 105:         ret = (Std_ReturnType)0x00;
@@ -898,35 +902,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "106
 [; ;MCAL_Layer/I2C/hal_i2c.c: 106:     }
 }
-[e $U 300  ]
+[e $U 305  ]
 "107
 [; ;MCAL_Layer/I2C/hal_i2c.c: 107:     else{
-[e :U 299 ]
+[e :U 304 ]
 {
 "109
 [; ;MCAL_Layer/I2C/hal_i2c.c: 109:         SSPCON2bits.SEN = 1;
 [e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
 "111
 [; ;MCAL_Layer/I2C/hal_i2c.c: 111:         while(SSPCON2bits.SEN);
-[e $U 301  ]
-[e :U 302 ]
-[e :U 301 ]
-[e $ != -> . . _SSPCON2bits 0 0 `i -> 0 `i 302  ]
-[e :U 303 ]
+[e $U 306  ]
+[e :U 307 ]
+[e :U 306 ]
+[e $ != -> . . _SSPCON2bits 0 0 `i -> 0 `i 307  ]
+[e :U 308 ]
 "113
 [; ;MCAL_Layer/I2C/hal_i2c.c: 113:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "115
 [; ;MCAL_Layer/I2C/hal_i2c.c: 115:         if(1 == SSPSTATbits.S){
-[e $ ! == -> 1 `i -> . . _SSPSTATbits 2 3 `i 304  ]
+[e $ ! == -> 1 `i -> . . _SSPSTATbits 2 3 `i 309  ]
 {
 "117
 [; ;MCAL_Layer/I2C/hal_i2c.c: 117:         }
 }
-[e $U 305  ]
+[e $U 310  ]
 "118
 [; ;MCAL_Layer/I2C/hal_i2c.c: 118:         else{
-[e :U 304 ]
+[e :U 309 ]
 {
 "119
 [; ;MCAL_Layer/I2C/hal_i2c.c: 119:             ret = (Std_ReturnType)0x00;
@@ -934,25 +938,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "120
 [; ;MCAL_Layer/I2C/hal_i2c.c: 120:         }
 }
-[e :U 305 ]
+[e :U 310 ]
 "121
 [; ;MCAL_Layer/I2C/hal_i2c.c: 121:     }
 }
-[e :U 300 ]
+[e :U 305 ]
 "122
 [; ;MCAL_Layer/I2C/hal_i2c.c: 122:     return ret;
 [e ) _ret ]
-[e $UE 298  ]
+[e $UE 303  ]
 "123
 [; ;MCAL_Layer/I2C/hal_i2c.c: 123: }
-[e :UE 298 ]
+[e :UE 303 ]
 }
 "125
 [; ;MCAL_Layer/I2C/hal_i2c.c: 125: Std_ReturnType MSSP_I2C_Master_Send_Repeated_Start(const mssp_i2c_t *i2c_obj){
-[v _MSSP_I2C_Master_Send_Repeated_Start `(uc ~T0 @X0 1 ef1`*CS275 ]
+[v _MSSP_I2C_Master_Send_Repeated_Start `(uc ~T0 @X0 1 ef1`*CS280 ]
 {
 [e :U _MSSP_I2C_Master_Send_Repeated_Start ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
 "126
 [; ;MCAL_Layer/I2C/hal_i2c.c: 126:     Std_ReturnType ret = (Std_ReturnType)0x01;
@@ -960,7 +964,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "127
 [; ;MCAL_Layer/I2C/hal_i2c.c: 127:     if(((void*)0) == i2c_obj){
-[e $ ! == -> -> -> 0 `i `*v `*CS275 _i2c_obj 307  ]
+[e $ ! == -> -> -> 0 `i `*v `*CS280 _i2c_obj 312  ]
 {
 "128
 [; ;MCAL_Layer/I2C/hal_i2c.c: 128:         ret = (Std_ReturnType)0x00;
@@ -968,42 +972,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 "129
 [; ;MCAL_Layer/I2C/hal_i2c.c: 129:     }
 }
-[e $U 308  ]
+[e $U 313  ]
 "130
 [; ;MCAL_Layer/I2C/hal_i2c.c: 130:     else{
-[e :U 307 ]
+[e :U 312 ]
 {
 "132
 [; ;MCAL_Layer/I2C/hal_i2c.c: 132:         SSPCON2bits.RSEN = 1;
 [e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
 "134
 [; ;MCAL_Layer/I2C/hal_i2c.c: 134:         while(SSPCON2bits.RSEN);
-[e $U 309  ]
-[e :U 310 ]
-[e :U 309 ]
-[e $ != -> . . _SSPCON2bits 0 1 `i -> 0 `i 310  ]
-[e :U 311 ]
+[e $U 314  ]
+[e :U 315 ]
+[e :U 314 ]
+[e $ != -> . . _SSPCON2bits 0 1 `i -> 0 `i 315  ]
+[e :U 316 ]
 "136
 [; ;MCAL_Layer/I2C/hal_i2c.c: 136:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "138
 [; ;MCAL_Layer/I2C/hal_i2c.c: 138:     }
 }
-[e :U 308 ]
+[e :U 313 ]
 "139
 [; ;MCAL_Layer/I2C/hal_i2c.c: 139:     return ret;
 [e ) _ret ]
-[e $UE 306  ]
+[e $UE 311  ]
 "140
 [; ;MCAL_Layer/I2C/hal_i2c.c: 140: }
-[e :UE 306 ]
+[e :UE 311 ]
 }
 "142
 [; ;MCAL_Layer/I2C/hal_i2c.c: 142: Std_ReturnType MSSP_I2C_Master_Send_Stop(const mssp_i2c_t *i2c_obj){
-[v _MSSP_I2C_Master_Send_Stop `(uc ~T0 @X0 1 ef1`*CS275 ]
+[v _MSSP_I2C_Master_Send_Stop `(uc ~T0 @X0 1 ef1`*CS280 ]
 {
 [e :U _MSSP_I2C_Master_Send_Stop ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
 "143
 [; ;MCAL_Layer/I2C/hal_i2c.c: 143:     Std_ReturnType ret = (Std_ReturnType)0x01;
@@ -1011,7 +1015,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "144
 [; ;MCAL_Layer/I2C/hal_i2c.c: 144:     if(((void*)0) == i2c_obj){
-[e $ ! == -> -> -> 0 `i `*v `*CS275 _i2c_obj 313  ]
+[e $ ! == -> -> -> 0 `i `*v `*CS280 _i2c_obj 318  ]
 {
 "145
 [; ;MCAL_Layer/I2C/hal_i2c.c: 145:         ret = (Std_ReturnType)0x00;
@@ -1019,35 +1023,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "146
 [; ;MCAL_Layer/I2C/hal_i2c.c: 146:     }
 }
-[e $U 314  ]
+[e $U 319  ]
 "147
 [; ;MCAL_Layer/I2C/hal_i2c.c: 147:     else{
-[e :U 313 ]
+[e :U 318 ]
 {
 "149
 [; ;MCAL_Layer/I2C/hal_i2c.c: 149:         SSPCON2bits.PEN = 1;
 [e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
 "151
 [; ;MCAL_Layer/I2C/hal_i2c.c: 151:         while(SSPCON2bits.PEN);
-[e $U 315  ]
-[e :U 316 ]
-[e :U 315 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> 0 `i 316  ]
-[e :U 317 ]
+[e $U 320  ]
+[e :U 321 ]
+[e :U 320 ]
+[e $ != -> . . _SSPCON2bits 0 2 `i -> 0 `i 321  ]
+[e :U 322 ]
 "153
 [; ;MCAL_Layer/I2C/hal_i2c.c: 153:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "155
 [; ;MCAL_Layer/I2C/hal_i2c.c: 155:         if(1 == SSPSTATbits.P){
-[e $ ! == -> 1 `i -> . . _SSPSTATbits 2 4 `i 318  ]
+[e $ ! == -> 1 `i -> . . _SSPSTATbits 2 4 `i 323  ]
 {
 "157
 [; ;MCAL_Layer/I2C/hal_i2c.c: 157:         }
 }
-[e $U 319  ]
+[e $U 324  ]
 "158
 [; ;MCAL_Layer/I2C/hal_i2c.c: 158:         else{
-[e :U 318 ]
+[e :U 323 ]
 {
 "159
 [; ;MCAL_Layer/I2C/hal_i2c.c: 159:             ret = (Std_ReturnType)0x00;
@@ -1055,25 +1059,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "160
 [; ;MCAL_Layer/I2C/hal_i2c.c: 160:         }
 }
-[e :U 319 ]
+[e :U 324 ]
 "161
 [; ;MCAL_Layer/I2C/hal_i2c.c: 161:     }
 }
-[e :U 314 ]
+[e :U 319 ]
 "162
 [; ;MCAL_Layer/I2C/hal_i2c.c: 162:     return ret;
 [e ) _ret ]
-[e $UE 312  ]
+[e $UE 317  ]
 "163
 [; ;MCAL_Layer/I2C/hal_i2c.c: 163: }
-[e :UE 312 ]
+[e :UE 317 ]
 }
 "165
 [; ;MCAL_Layer/I2C/hal_i2c.c: 165: Std_ReturnType MSSP_I2C_Master_Write_Blocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack){
-[v _MSSP_I2C_Master_Write_Blocking `(uc ~T0 @X0 1 ef3`*CS275`uc`*uc ]
+[v _MSSP_I2C_Master_Write_Blocking `(uc ~T0 @X0 1 ef3`*CS280`uc`*uc ]
 {
 [e :U _MSSP_I2C_Master_Write_Blocking ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [v _i2c_data `uc ~T0 @X0 1 r2 ]
 [v __ack `*uc ~T0 @X0 1 r3 ]
 [f ]
@@ -1083,7 +1087,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "167
 [; ;MCAL_Layer/I2C/hal_i2c.c: 167:     if((((void*)0) == i2c_obj) || (((void*)0) == _ack)){
-[e $ ! || == -> -> -> 0 `i `*v `*CS275 _i2c_obj == -> -> -> 0 `i `*v `*uc __ack 321  ]
+[e $ ! || == -> -> -> 0 `i `*v `*CS280 _i2c_obj == -> -> -> 0 `i `*v `*uc __ack 326  ]
 {
 "168
 [; ;MCAL_Layer/I2C/hal_i2c.c: 168:         ret = (Std_ReturnType)0x00;
@@ -1091,27 +1095,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "169
 [; ;MCAL_Layer/I2C/hal_i2c.c: 169:     }
 }
-[e $U 322  ]
+[e $U 327  ]
 "170
 [; ;MCAL_Layer/I2C/hal_i2c.c: 170:     else{
-[e :U 321 ]
+[e :U 326 ]
 {
 "172
 [; ;MCAL_Layer/I2C/hal_i2c.c: 172:         SSPBUF = i2c_data;
 [e = _SSPBUF _i2c_data ]
 "175
 [; ;MCAL_Layer/I2C/hal_i2c.c: 175:         while(SSPSTATbits.BF);
-[e $U 323  ]
-[e :U 324 ]
-[e :U 323 ]
-[e $ != -> . . _SSPSTATbits 2 0 `i -> 0 `i 324  ]
-[e :U 325 ]
+[e $U 328  ]
+[e :U 329 ]
+[e :U 328 ]
+[e $ != -> . . _SSPSTATbits 2 0 `i -> 0 `i 329  ]
+[e :U 330 ]
 "177
 [; ;MCAL_Layer/I2C/hal_i2c.c: 177:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "179
 [; ;MCAL_Layer/I2C/hal_i2c.c: 179:         if(0 == SSPCON2bits.ACKSTAT){
-[e $ ! == -> 0 `i -> . . _SSPCON2bits 0 6 `i 326  ]
+[e $ ! == -> 0 `i -> . . _SSPCON2bits 0 6 `i 331  ]
 {
 "180
 [; ;MCAL_Layer/I2C/hal_i2c.c: 180:             *_ack = 0;
@@ -1119,10 +1123,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "181
 [; ;MCAL_Layer/I2C/hal_i2c.c: 181:         }
 }
-[e $U 327  ]
+[e $U 332  ]
 "182
 [; ;MCAL_Layer/I2C/hal_i2c.c: 182:         else{
-[e :U 326 ]
+[e :U 331 ]
 {
 "183
 [; ;MCAL_Layer/I2C/hal_i2c.c: 183:             *_ack = 1;
@@ -1130,25 +1134,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "184
 [; ;MCAL_Layer/I2C/hal_i2c.c: 184:         }
 }
-[e :U 327 ]
+[e :U 332 ]
 "186
 [; ;MCAL_Layer/I2C/hal_i2c.c: 186:     }
 }
-[e :U 322 ]
+[e :U 327 ]
 "187
 [; ;MCAL_Layer/I2C/hal_i2c.c: 187:     return ret;
 [e ) _ret ]
-[e $UE 320  ]
+[e $UE 325  ]
 "188
 [; ;MCAL_Layer/I2C/hal_i2c.c: 188: }
-[e :UE 320 ]
+[e :UE 325 ]
 }
 "190
 [; ;MCAL_Layer/I2C/hal_i2c.c: 190: Std_ReturnType MSSP_I2C_Master_Write_NBlocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack){
-[v _MSSP_I2C_Master_Write_NBlocking `(uc ~T0 @X0 1 ef3`*CS275`uc`*uc ]
+[v _MSSP_I2C_Master_Write_NBlocking `(uc ~T0 @X0 1 ef3`*CS280`uc`*uc ]
 {
 [e :U _MSSP_I2C_Master_Write_NBlocking ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [v _i2c_data `uc ~T0 @X0 1 r2 ]
 [v __ack `*uc ~T0 @X0 1 r3 ]
 [f ]
@@ -1158,7 +1162,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "192
 [; ;MCAL_Layer/I2C/hal_i2c.c: 192:     if((((void*)0) == i2c_obj) || (((void*)0) == _ack)){
-[e $ ! || == -> -> -> 0 `i `*v `*CS275 _i2c_obj == -> -> -> 0 `i `*v `*uc __ack 329  ]
+[e $ ! || == -> -> -> 0 `i `*v `*CS280 _i2c_obj == -> -> -> 0 `i `*v `*uc __ack 334  ]
 {
 "193
 [; ;MCAL_Layer/I2C/hal_i2c.c: 193:         ret = (Std_ReturnType)0x00;
@@ -1166,14 +1170,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "194
 [; ;MCAL_Layer/I2C/hal_i2c.c: 194:     }
 }
-[e $U 330  ]
+[e $U 335  ]
 "195
 [; ;MCAL_Layer/I2C/hal_i2c.c: 195:     else{
-[e :U 329 ]
+[e :U 334 ]
 {
 "196
 [; ;MCAL_Layer/I2C/hal_i2c.c: 196:         if(!PIR1bits.SSPIF){
-[e $ ! ! != -> . . _PIR1bits 0 3 `i -> 0 `i 331  ]
+[e $ ! ! != -> . . _PIR1bits 0 3 `i -> 0 `i 336  ]
 {
 "198
 [; ;MCAL_Layer/I2C/hal_i2c.c: 198:         SSPBUF = i2c_data;
@@ -1181,10 +1185,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "199
 [; ;MCAL_Layer/I2C/hal_i2c.c: 199:         }
 }
-[e $U 332  ]
+[e $U 337  ]
 "200
 [; ;MCAL_Layer/I2C/hal_i2c.c: 200:         else{
-[e :U 331 ]
+[e :U 336 ]
 {
 "201
 [; ;MCAL_Layer/I2C/hal_i2c.c: 201:             ret = (Std_ReturnType)0x00;
@@ -1192,10 +1196,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "202
 [; ;MCAL_Layer/I2C/hal_i2c.c: 202:         }
 }
-[e :U 332 ]
+[e :U 337 ]
 "204
 [; ;MCAL_Layer/I2C/hal_i2c.c: 204:         if(0 == SSPCON2bits.ACKSTAT){
-[e $ ! == -> 0 `i -> . . _SSPCON2bits 0 6 `i 333  ]
+[e $ ! == -> 0 `i -> . . _SSPCON2bits 0 6 `i 338  ]
 {
 "205
 [; ;MCAL_Layer/I2C/hal_i2c.c: 205:             *_ack = 0;
@@ -1203,10 +1207,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "206
 [; ;MCAL_Layer/I2C/hal_i2c.c: 206:         }
 }
-[e $U 334  ]
+[e $U 339  ]
 "207
 [; ;MCAL_Layer/I2C/hal_i2c.c: 207:         else{
-[e :U 333 ]
+[e :U 338 ]
 {
 "208
 [; ;MCAL_Layer/I2C/hal_i2c.c: 208:             *_ack = 1;
@@ -1214,25 +1218,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "209
 [; ;MCAL_Layer/I2C/hal_i2c.c: 209:         }
 }
-[e :U 334 ]
+[e :U 339 ]
 "211
 [; ;MCAL_Layer/I2C/hal_i2c.c: 211:     }
 }
-[e :U 330 ]
+[e :U 335 ]
 "212
 [; ;MCAL_Layer/I2C/hal_i2c.c: 212:     return ret;
 [e ) _ret ]
-[e $UE 328  ]
+[e $UE 333  ]
 "213
 [; ;MCAL_Layer/I2C/hal_i2c.c: 213: }
-[e :UE 328 ]
+[e :UE 333 ]
 }
 "215
 [; ;MCAL_Layer/I2C/hal_i2c.c: 215: Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data){
-[v _MSSP_I2C_Master_Read_Blocking `(uc ~T0 @X0 1 ef3`*CS275`uc`*uc ]
+[v _MSSP_I2C_Master_Read_Blocking `(uc ~T0 @X0 1 ef3`*CS280`uc`*uc ]
 {
 [e :U _MSSP_I2C_Master_Read_Blocking ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [v _ack `uc ~T0 @X0 1 r2 ]
 [v _i2c_data `*uc ~T0 @X0 1 r3 ]
 [f ]
@@ -1242,7 +1246,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 1 `i `uc ]
 "217
 [; ;MCAL_Layer/I2C/hal_i2c.c: 217:     if((((void*)0) == i2c_obj) || (((void*)0) == i2c_data)){
-[e $ ! || == -> -> -> 0 `i `*v `*CS275 _i2c_obj == -> -> -> 0 `i `*v `*uc _i2c_data 336  ]
+[e $ ! || == -> -> -> 0 `i `*v `*CS280 _i2c_obj == -> -> -> 0 `i `*v `*uc _i2c_data 341  ]
 {
 "218
 [; ;MCAL_Layer/I2C/hal_i2c.c: 218:         ret = (Std_ReturnType)0x00;
@@ -1250,27 +1254,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "219
 [; ;MCAL_Layer/I2C/hal_i2c.c: 219:     }
 }
-[e $U 337  ]
+[e $U 342  ]
 "220
 [; ;MCAL_Layer/I2C/hal_i2c.c: 220:     else{
-[e :U 336 ]
+[e :U 341 ]
 {
 "222
 [; ;MCAL_Layer/I2C/hal_i2c.c: 222:         (SSPCON2bits.RCEN = 1);
 [e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
 "224
 [; ;MCAL_Layer/I2C/hal_i2c.c: 224:         while(!SSPSTATbits.BF);
-[e $U 338  ]
-[e :U 339 ]
-[e :U 338 ]
-[e $ ! != -> . . _SSPSTATbits 2 0 `i -> 0 `i 339  ]
-[e :U 340 ]
+[e $U 343  ]
+[e :U 344 ]
+[e :U 343 ]
+[e $ ! != -> . . _SSPSTATbits 2 0 `i -> 0 `i 344  ]
+[e :U 345 ]
 "226
 [; ;MCAL_Layer/I2C/hal_i2c.c: 226:         *i2c_data = SSPBUF;
 [e = *U _i2c_data _SSPBUF ]
 "228
 [; ;MCAL_Layer/I2C/hal_i2c.c: 228:         if(0 == ack){
-[e $ ! == -> 0 `i -> _ack `i 341  ]
+[e $ ! == -> 0 `i -> _ack `i 346  ]
 {
 "229
 [; ;MCAL_Layer/I2C/hal_i2c.c: 229:             SSPCON2bits.ACKDT = 0;
@@ -1280,19 +1284,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
 "232
 [; ;MCAL_Layer/I2C/hal_i2c.c: 232:             while(SSPCON2bits.ACKEN);
-[e $U 342  ]
-[e :U 343 ]
-[e :U 342 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 343  ]
-[e :U 344 ]
+[e $U 347  ]
+[e :U 348 ]
+[e :U 347 ]
+[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 348  ]
+[e :U 349 ]
 "233
 [; ;MCAL_Layer/I2C/hal_i2c.c: 233:         }
 }
-[e $U 345  ]
+[e $U 350  ]
 "234
 [; ;MCAL_Layer/I2C/hal_i2c.c: 234:         else if(1 == ack){
-[e :U 341 ]
-[e $ ! == -> 1 `i -> _ack `i 346  ]
+[e :U 346 ]
+[e $ ! == -> 1 `i -> _ack `i 351  ]
 {
 "235
 [; ;MCAL_Layer/I2C/hal_i2c.c: 235:             SSPCON2bits.ACKDT = 1;
@@ -1302,50 +1306,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
 "238
 [; ;MCAL_Layer/I2C/hal_i2c.c: 238:             while(SSPCON2bits.ACKEN);
-[e $U 347  ]
-[e :U 348 ]
-[e :U 347 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 348  ]
-[e :U 349 ]
+[e $U 352  ]
+[e :U 353 ]
+[e :U 352 ]
+[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 353  ]
+[e :U 354 ]
 "239
 [; ;MCAL_Layer/I2C/hal_i2c.c: 239:         }
 }
-[e $U 350  ]
+[e $U 355  ]
 "240
 [; ;MCAL_Layer/I2C/hal_i2c.c: 240:         else { }
-[e :U 346 ]
+[e :U 351 ]
 {
 }
+[e :U 355 ]
 [e :U 350 ]
-[e :U 345 ]
 "242
 [; ;MCAL_Layer/I2C/hal_i2c.c: 242:     }
 }
-[e :U 337 ]
+[e :U 342 ]
 "243
 [; ;MCAL_Layer/I2C/hal_i2c.c: 243:     return ret;
 [e ) _ret ]
-[e $UE 335  ]
+[e $UE 340  ]
 "244
 [; ;MCAL_Layer/I2C/hal_i2c.c: 244: }
-[e :UE 335 ]
+[e :UE 340 ]
 }
 "246
 [; ;MCAL_Layer/I2C/hal_i2c.c: 246: Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data){
-[v _MSSP_I2C_Master_Read_NBlocking `(uc ~T0 @X0 1 ef3`*CS275`uc`*uc ]
+[v _MSSP_I2C_Master_Read_NBlocking `(uc ~T0 @X0 1 ef3`*CS280`uc`*uc ]
 {
 [e :U _MSSP_I2C_Master_Read_NBlocking ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [v _ack `uc ~T0 @X0 1 r2 ]
 [v _i2c_data `*uc ~T0 @X0 1 r3 ]
 [f ]
 "247
-[; ;MCAL_Layer/I2C/hal_i2c.c: 247:      Std_ReturnType ret = (Std_ReturnType)0x01;
+[; ;MCAL_Layer/I2C/hal_i2c.c: 247:     Std_ReturnType ret = (Std_ReturnType)0x01;
 [v _ret `uc ~T0 @X0 1 a ]
 [e = _ret -> -> 1 `i `uc ]
 "248
 [; ;MCAL_Layer/I2C/hal_i2c.c: 248:     if((((void*)0) == i2c_obj) || (((void*)0) == i2c_data)){
-[e $ ! || == -> -> -> 0 `i `*v `*CS275 _i2c_obj == -> -> -> 0 `i `*v `*uc _i2c_data 352  ]
+[e $ ! || == -> -> -> 0 `i `*v `*CS280 _i2c_obj == -> -> -> 0 `i `*v `*uc _i2c_data 357  ]
 {
 "249
 [; ;MCAL_Layer/I2C/hal_i2c.c: 249:         ret = (Std_ReturnType)0x00;
@@ -1353,17 +1357,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "250
 [; ;MCAL_Layer/I2C/hal_i2c.c: 250:     }
 }
-[e $U 353  ]
+[e $U 358  ]
 "251
 [; ;MCAL_Layer/I2C/hal_i2c.c: 251:     else{
-[e :U 352 ]
+[e :U 357 ]
 {
 "253
 [; ;MCAL_Layer/I2C/hal_i2c.c: 253:         (SSPCON2bits.RCEN = 1);
 [e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
 "255
 [; ;MCAL_Layer/I2C/hal_i2c.c: 255:         if(PIR1bits.SSPIF){
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 354  ]
+[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 359  ]
 {
 "257
 [; ;MCAL_Layer/I2C/hal_i2c.c: 257:         *i2c_data = SSPBUF;
@@ -1371,10 +1375,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "258
 [; ;MCAL_Layer/I2C/hal_i2c.c: 258:         }
 }
-[e $U 355  ]
+[e $U 360  ]
 "259
 [; ;MCAL_Layer/I2C/hal_i2c.c: 259:         else{
-[e :U 354 ]
+[e :U 359 ]
 {
 "260
 [; ;MCAL_Layer/I2C/hal_i2c.c: 260:             ret = (Std_ReturnType)0x00;
@@ -1382,10 +1386,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "261
 [; ;MCAL_Layer/I2C/hal_i2c.c: 261:         }
 }
-[e :U 355 ]
+[e :U 360 ]
 "263
 [; ;MCAL_Layer/I2C/hal_i2c.c: 263:         if(0 == ack){
-[e $ ! == -> 0 `i -> _ack `i 356  ]
+[e $ ! == -> 0 `i -> _ack `i 361  ]
 {
 "264
 [; ;MCAL_Layer/I2C/hal_i2c.c: 264:             SSPCON2bits.ACKDT = 0;
@@ -1395,19 +1399,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
 "267
 [; ;MCAL_Layer/I2C/hal_i2c.c: 267:             while(SSPCON2bits.ACKEN);
-[e $U 357  ]
-[e :U 358 ]
-[e :U 357 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 358  ]
-[e :U 359 ]
+[e $U 362  ]
+[e :U 363 ]
+[e :U 362 ]
+[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 363  ]
+[e :U 364 ]
 "268
 [; ;MCAL_Layer/I2C/hal_i2c.c: 268:         }
 }
-[e $U 360  ]
+[e $U 365  ]
 "269
 [; ;MCAL_Layer/I2C/hal_i2c.c: 269:         else if(1 == ack){
-[e :U 356 ]
-[e $ ! == -> 1 `i -> _ack `i 361  ]
+[e :U 361 ]
+[e $ ! == -> 1 `i -> _ack `i 366  ]
 {
 "270
 [; ;MCAL_Layer/I2C/hal_i2c.c: 270:             SSPCON2bits.ACKDT = 1;
@@ -1417,168 +1421,286 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
 "273
 [; ;MCAL_Layer/I2C/hal_i2c.c: 273:             while(SSPCON2bits.ACKEN);
-[e $U 362  ]
-[e :U 363 ]
-[e :U 362 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 363  ]
-[e :U 364 ]
+[e $U 367  ]
+[e :U 368 ]
+[e :U 367 ]
+[e $ != -> . . _SSPCON2bits 0 4 `i -> 0 `i 368  ]
+[e :U 369 ]
 "274
 [; ;MCAL_Layer/I2C/hal_i2c.c: 274:         }
 }
-[e $U 365  ]
+[e $U 370  ]
 "275
 [; ;MCAL_Layer/I2C/hal_i2c.c: 275:         else { }
-[e :U 361 ]
+[e :U 366 ]
 {
 }
+[e :U 370 ]
 [e :U 365 ]
-[e :U 360 ]
 "277
 [; ;MCAL_Layer/I2C/hal_i2c.c: 277:     }
 }
-[e :U 353 ]
+[e :U 358 ]
 "278
 [; ;MCAL_Layer/I2C/hal_i2c.c: 278:     return ret;
 [e ) _ret ]
-[e $UE 351  ]
+[e $UE 356  ]
 "279
 [; ;MCAL_Layer/I2C/hal_i2c.c: 279: }
-[e :UE 351 ]
+[e :UE 356 ]
 }
-"281
-[; ;MCAL_Layer/I2C/hal_i2c.c: 281: void MSSP_I2C_ISR(void){
+"289
+[; ;MCAL_Layer/I2C/hal_i2c.c: 289: Std_ReturnType MSSP_I2C_EXT_Device_Write_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 _data, uint8 *slave_ack){
+[v _MSSP_I2C_EXT_Device_Write_1_Byte `(uc ~T0 @X0 1 ef5`*CS280`uc`uc`uc`*uc ]
+{
+[e :U _MSSP_I2C_EXT_Device_Write_1_Byte ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
+[v _slave_add `uc ~T0 @X0 1 r2 ]
+[v _byte_address `uc ~T0 @X0 1 r3 ]
+[v __data `uc ~T0 @X0 1 r4 ]
+[v _slave_ack `*uc ~T0 @X0 1 r5 ]
+[f ]
+"290
+[; ;MCAL_Layer/I2C/hal_i2c.c: 290:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"291
+[; ;MCAL_Layer/I2C/hal_i2c.c: 291:     if((((void*)0) == i2c_obj) || (((void*)0) == slave_ack)){
+[e $ ! || == -> -> -> 0 `i `*v `*CS280 _i2c_obj == -> -> -> 0 `i `*v `*uc _slave_ack 372  ]
+{
+"292
+[; ;MCAL_Layer/I2C/hal_i2c.c: 292:         ret = (Std_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"293
+[; ;MCAL_Layer/I2C/hal_i2c.c: 293:     }
+}
+[e $U 373  ]
+"294
+[; ;MCAL_Layer/I2C/hal_i2c.c: 294:     else{
+[e :U 372 ]
+{
+"295
+[; ;MCAL_Layer/I2C/hal_i2c.c: 295:         ret = MSSP_I2C_Master_Send_Start(&i2c_obj);
+[e = _ret ( _MSSP_I2C_Master_Send_Start (1 -> &U _i2c_obj `*CS280 ]
+"296
+[; ;MCAL_Layer/I2C/hal_i2c.c: 296:         ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, slave_add, &slave_ack);
+[e = _ret ( _MSSP_I2C_Master_Write_Blocking (3 , , -> &U _i2c_obj `*CS280 _slave_add -> &U _slave_ack `*uc ]
+"297
+[; ;MCAL_Layer/I2C/hal_i2c.c: 297:         ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, byte_address, &slave_ack);
+[e = _ret ( _MSSP_I2C_Master_Write_Blocking (3 , , -> &U _i2c_obj `*CS280 _byte_address -> &U _slave_ack `*uc ]
+"298
+[; ;MCAL_Layer/I2C/hal_i2c.c: 298:         ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, _data, &slave_ack);
+[e = _ret ( _MSSP_I2C_Master_Write_Blocking (3 , , -> &U _i2c_obj `*CS280 __data -> &U _slave_ack `*uc ]
+"299
+[; ;MCAL_Layer/I2C/hal_i2c.c: 299:         ret = MSSP_I2C_Master_Send_Stop(&i2c_obj);
+[e = _ret ( _MSSP_I2C_Master_Send_Stop (1 -> &U _i2c_obj `*CS280 ]
+"300
+[; ;MCAL_Layer/I2C/hal_i2c.c: 300:         _delay((unsigned long)((1)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"301
+[; ;MCAL_Layer/I2C/hal_i2c.c: 301:     }
+}
+[e :U 373 ]
+"302
+[; ;MCAL_Layer/I2C/hal_i2c.c: 302: }
+[e :UE 371 ]
+}
+"312
+[; ;MCAL_Layer/I2C/hal_i2c.c: 312: Std_ReturnType MSSP_I2C_EXT_Device_Read_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 *_data, uint8 *slave_ack){
+[v _MSSP_I2C_EXT_Device_Read_1_Byte `(uc ~T0 @X0 1 ef5`*CS280`uc`uc`*uc`*uc ]
+{
+[e :U _MSSP_I2C_EXT_Device_Read_1_Byte ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
+[v _slave_add `uc ~T0 @X0 1 r2 ]
+[v _byte_address `uc ~T0 @X0 1 r3 ]
+[v __data `*uc ~T0 @X0 1 r4 ]
+[v _slave_ack `*uc ~T0 @X0 1 r5 ]
+[f ]
+"313
+[; ;MCAL_Layer/I2C/hal_i2c.c: 313:     Std_ReturnType ret = (Std_ReturnType)0x01;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"314
+[; ;MCAL_Layer/I2C/hal_i2c.c: 314:     if((((void*)0) == i2c_obj) || (((void*)0) == _data) || (((void*)0) == slave_ack)){
+[e $ ! || || == -> -> -> 0 `i `*v `*CS280 _i2c_obj == -> -> -> 0 `i `*v `*uc __data == -> -> -> 0 `i `*v `*uc _slave_ack 375  ]
+{
+"315
+[; ;MCAL_Layer/I2C/hal_i2c.c: 315:         ret = (Std_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"316
+[; ;MCAL_Layer/I2C/hal_i2c.c: 316:     }
+}
+[e $U 376  ]
+"317
+[; ;MCAL_Layer/I2C/hal_i2c.c: 317:     else{
+[e :U 375 ]
+{
+"318
+[; ;MCAL_Layer/I2C/hal_i2c.c: 318:         ret = MSSP_I2C_Master_Send_Start(&i2c_obj);
+[e = _ret ( _MSSP_I2C_Master_Send_Start (1 -> &U _i2c_obj `*CS280 ]
+"319
+[; ;MCAL_Layer/I2C/hal_i2c.c: 319:         ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, slave_add, &slave_ack);
+[e = _ret ( _MSSP_I2C_Master_Write_Blocking (3 , , -> &U _i2c_obj `*CS280 _slave_add -> &U _slave_ack `*uc ]
+"320
+[; ;MCAL_Layer/I2C/hal_i2c.c: 320:         ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, byte_address, &slave_ack);
+[e = _ret ( _MSSP_I2C_Master_Write_Blocking (3 , , -> &U _i2c_obj `*CS280 _byte_address -> &U _slave_ack `*uc ]
+"321
+[; ;MCAL_Layer/I2C/hal_i2c.c: 321:         ret = MSSP_I2C_Master_Send_Repeated_Start(&i2c_obj);
+[e = _ret ( _MSSP_I2C_Master_Send_Repeated_Start (1 -> &U _i2c_obj `*CS280 ]
+"322
+[; ;MCAL_Layer/I2C/hal_i2c.c: 322:         ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, (slave_add | 0x01 ), &slave_ack);
+[e = _ret ( _MSSP_I2C_Master_Write_Blocking (3 , , -> &U _i2c_obj `*CS280 -> | -> _slave_add `i -> 1 `i `uc -> &U _slave_ack `*uc ]
+"323
+[; ;MCAL_Layer/I2C/hal_i2c.c: 323:         ret = MSSP_I2C_Master_Read_Blocking(&i2c_obj, 1, _data);
+[e = _ret ( _MSSP_I2C_Master_Read_Blocking (3 , , -> &U _i2c_obj `*CS280 -> -> 1 `i `uc __data ]
+"324
+[; ;MCAL_Layer/I2C/hal_i2c.c: 324:         ret = MSSP_I2C_Master_Send_Stop(&i2c_obj);
+[e = _ret ( _MSSP_I2C_Master_Send_Stop (1 -> &U _i2c_obj `*CS280 ]
+"325
+[; ;MCAL_Layer/I2C/hal_i2c.c: 325:         _delay((unsigned long)((1)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"326
+[; ;MCAL_Layer/I2C/hal_i2c.c: 326:     }
+}
+[e :U 376 ]
+"327
+[; ;MCAL_Layer/I2C/hal_i2c.c: 327: }
+[e :UE 374 ]
+}
+"329
+[; ;MCAL_Layer/I2C/hal_i2c.c: 329: void MSSP_I2C_ISR(void){
 [v _MSSP_I2C_ISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _MSSP_I2C_ISR ]
 [f ]
-"283
-[; ;MCAL_Layer/I2C/hal_i2c.c: 283:     (PIR1bits.SSPIF = 0);
+"331
+[; ;MCAL_Layer/I2C/hal_i2c.c: 331:     (PIR1bits.SSPIF = 0);
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"284
-[; ;MCAL_Layer/I2C/hal_i2c.c: 284:     if(I2C_DefaultInterruptHandle){
-[e $ ! != _I2C_DefaultInterruptHandle -> -> 0 `i `*F3630 367  ]
+"332
+[; ;MCAL_Layer/I2C/hal_i2c.c: 332:     if(I2C_DefaultInterruptHandle){
+[e $ ! != _I2C_DefaultInterruptHandle -> -> 0 `i `*F3718 378  ]
 {
-"285
-[; ;MCAL_Layer/I2C/hal_i2c.c: 285:         I2C_DefaultInterruptHandle();
+"333
+[; ;MCAL_Layer/I2C/hal_i2c.c: 333:         I2C_DefaultInterruptHandle();
 [e ( *U _I2C_DefaultInterruptHandle ..  ]
-"286
-[; ;MCAL_Layer/I2C/hal_i2c.c: 286:     }
+"334
+[; ;MCAL_Layer/I2C/hal_i2c.c: 334:     }
 }
-[e :U 367 ]
-"288
-[; ;MCAL_Layer/I2C/hal_i2c.c: 288: }
-[e :UE 366 ]
+[e :U 378 ]
+"336
+[; ;MCAL_Layer/I2C/hal_i2c.c: 336: }
+[e :UE 377 ]
 }
-"290
-[; ;MCAL_Layer/I2C/hal_i2c.c: 290: void MSSP_I2C_BC_ISR(void){
+"338
+[; ;MCAL_Layer/I2C/hal_i2c.c: 338: void MSSP_I2C_BC_ISR(void){
 [v _MSSP_I2C_BC_ISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _MSSP_I2C_BC_ISR ]
 [f ]
-"292
-[; ;MCAL_Layer/I2C/hal_i2c.c: 292:     (PIR2bits.BCLIF = 0);
+"340
+[; ;MCAL_Layer/I2C/hal_i2c.c: 340:     (PIR2bits.BCLIF = 0);
 [e = . . _PIR2bits 0 3 -> -> 0 `i `uc ]
-"293
-[; ;MCAL_Layer/I2C/hal_i2c.c: 293:     if(I2C_Report_Write_Collision_InterruptHandler){
-[e $ ! != _I2C_Report_Write_Collision_InterruptHandler -> -> 0 `i `*F3632 369  ]
+"341
+[; ;MCAL_Layer/I2C/hal_i2c.c: 341:     if(I2C_Report_Write_Collision_InterruptHandler){
+[e $ ! != _I2C_Report_Write_Collision_InterruptHandler -> -> 0 `i `*F3720 380  ]
 {
-"294
-[; ;MCAL_Layer/I2C/hal_i2c.c: 294:         I2C_Report_Write_Collision_InterruptHandler();
+"342
+[; ;MCAL_Layer/I2C/hal_i2c.c: 342:         I2C_Report_Write_Collision_InterruptHandler();
 [e ( *U _I2C_Report_Write_Collision_InterruptHandler ..  ]
-"295
-[; ;MCAL_Layer/I2C/hal_i2c.c: 295:     }
+"343
+[; ;MCAL_Layer/I2C/hal_i2c.c: 343:     }
 }
-[e :U 369 ]
-"297
-[; ;MCAL_Layer/I2C/hal_i2c.c: 297: }
-[e :UE 368 ]
+[e :U 380 ]
+"345
+[; ;MCAL_Layer/I2C/hal_i2c.c: 345: }
+[e :UE 379 ]
 }
-[v F3634 `(v ~T0 @X0 1 tf ]
-"299
-[; ;MCAL_Layer/I2C/hal_i2c.c: 299: static __attribute__((inline)) void MSSP_I2C_Mode_GPIO_CFG(void){
-[v _MSSP_I2C_Mode_GPIO_CFG `TF3634 ~T0 @X0 1 s ]
+[v F3722 `(v ~T0 @X0 1 tf ]
+"347
+[; ;MCAL_Layer/I2C/hal_i2c.c: 347: static __attribute__((inline)) void MSSP_I2C_Mode_GPIO_CFG(void){
+[v _MSSP_I2C_Mode_GPIO_CFG `TF3722 ~T0 @X0 1 s ]
 {
 [e :U _MSSP_I2C_Mode_GPIO_CFG ]
 [f ]
-"300
-[; ;MCAL_Layer/I2C/hal_i2c.c: 300:     TRISCbits.TRISC3 = 1;
+"348
+[; ;MCAL_Layer/I2C/hal_i2c.c: 348:     TRISCbits.TRISC3 = 1;
 [e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
-"301
-[; ;MCAL_Layer/I2C/hal_i2c.c: 301:     TRISCbits.TRISC4 = 1;
+"349
+[; ;MCAL_Layer/I2C/hal_i2c.c: 349:     TRISCbits.TRISC4 = 1;
 [e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
-"302
-[; ;MCAL_Layer/I2C/hal_i2c.c: 302: }
-[e :UE 370 ]
+"350
+[; ;MCAL_Layer/I2C/hal_i2c.c: 350: }
+[e :UE 381 ]
 }
-[v F3636 `(v ~T0 @X0 1 tf1`*CS275 ]
-"304
-[; ;MCAL_Layer/I2C/hal_i2c.c: 304: static __attribute__((inline)) void I2C_Master_Mode_Clock_Configurations(const mssp_i2c_t *i2c_obj){
-[v _I2C_Master_Mode_Clock_Configurations `TF3636 ~T0 @X0 1 s ]
+[v F3724 `(v ~T0 @X0 1 tf1`*CS280 ]
+"352
+[; ;MCAL_Layer/I2C/hal_i2c.c: 352: static __attribute__((inline)) void I2C_Master_Mode_Clock_Configurations(const mssp_i2c_t *i2c_obj){
+[v _I2C_Master_Mode_Clock_Configurations `TF3724 ~T0 @X0 1 s ]
 {
 [e :U _I2C_Master_Mode_Clock_Configurations ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
-"306
-[; ;MCAL_Layer/I2C/hal_i2c.c: 306:     SSPCON1bits.SSPM = i2c_obj->i2c_cfg.i2c_mode_cfg;
+"354
+[; ;MCAL_Layer/I2C/hal_i2c.c: 354:     SSPCON1bits.SSPM = i2c_obj->i2c_cfg.i2c_mode_cfg;
 [e = . . _SSPCON1bits 0 0 . . *U _i2c_obj 1 0 ]
-"307
-[; ;MCAL_Layer/I2C/hal_i2c.c: 307:     SSPADD = (uint8)(((8000000UL / 4.0) / i2c_obj->i2c_clock) - 1);
+"355
+[; ;MCAL_Layer/I2C/hal_i2c.c: 355:     SSPADD = (uint8)(((8000000UL / 4.0) / i2c_obj->i2c_clock) - 1);
 [e = _SSPADD -> - / / -> -> 8000000 `ul `d .4.0 -> . *U _i2c_obj 0 `d -> -> 1 `i `d `uc ]
-"308
-[; ;MCAL_Layer/I2C/hal_i2c.c: 308: }
-[e :UE 371 ]
+"356
+[; ;MCAL_Layer/I2C/hal_i2c.c: 356: }
+[e :UE 382 ]
 }
-[v F3639 `(v ~T0 @X0 1 tf1`*CS275 ]
-"310
-[; ;MCAL_Layer/I2C/hal_i2c.c: 310: static __attribute__((inline)) void I2C_Slave_Mode_Configurations(const mssp_i2c_t *i2c_obj){
-[v _I2C_Slave_Mode_Configurations `TF3639 ~T0 @X0 1 s ]
+[v F3727 `(v ~T0 @X0 1 tf1`*CS280 ]
+"358
+[; ;MCAL_Layer/I2C/hal_i2c.c: 358: static __attribute__((inline)) void I2C_Slave_Mode_Configurations(const mssp_i2c_t *i2c_obj){
+[v _I2C_Slave_Mode_Configurations `TF3727 ~T0 @X0 1 s ]
 {
 [e :U _I2C_Slave_Mode_Configurations ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
-"311
-[; ;MCAL_Layer/I2C/hal_i2c.c: 311:     SSPCON1bits.SSPM = i2c_obj->i2c_cfg.i2c_mode_cfg;
+"359
+[; ;MCAL_Layer/I2C/hal_i2c.c: 359:     SSPCON1bits.SSPM = i2c_obj->i2c_cfg.i2c_mode_cfg;
 [e = . . _SSPCON1bits 0 0 . . *U _i2c_obj 1 0 ]
-"312
-[; ;MCAL_Layer/I2C/hal_i2c.c: 312: }
-[e :UE 372 ]
+"360
+[; ;MCAL_Layer/I2C/hal_i2c.c: 360: }
+[e :UE 383 ]
 }
-[v F3642 `(v ~T0 @X0 1 tf1`*CS275 ]
-"314
-[; ;MCAL_Layer/I2C/hal_i2c.c: 314: static __attribute__((inline)) void MSSP_I2C_Interrupt_Configurations(const mssp_i2c_t *i2c_obj){
-[v _MSSP_I2C_Interrupt_Configurations `TF3642 ~T0 @X0 1 s ]
+[v F3730 `(v ~T0 @X0 1 tf1`*CS280 ]
+"362
+[; ;MCAL_Layer/I2C/hal_i2c.c: 362: static __attribute__((inline)) void MSSP_I2C_Interrupt_Configurations(const mssp_i2c_t *i2c_obj){
+[v _MSSP_I2C_Interrupt_Configurations `TF3730 ~T0 @X0 1 s ]
 {
 [e :U _MSSP_I2C_Interrupt_Configurations ]
-[v _i2c_obj `*CS275 ~T0 @X0 1 r1 ]
+[v _i2c_obj `*CS280 ~T0 @X0 1 r1 ]
 [f ]
-"316
-[; ;MCAL_Layer/I2C/hal_i2c.c: 316:         (PIE1bits.SSPIE = 1);
+"364
+[; ;MCAL_Layer/I2C/hal_i2c.c: 364:         (PIE1bits.SSPIE = 1);
 [e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
-"317
-[; ;MCAL_Layer/I2C/hal_i2c.c: 317:         (PIE2bits.BCLIE = 1);
+"365
+[; ;MCAL_Layer/I2C/hal_i2c.c: 365:         (PIE2bits.BCLIE = 1);
 [e = . . _PIE2bits 0 3 -> -> 1 `i `uc ]
-"318
-[; ;MCAL_Layer/I2C/hal_i2c.c: 318:         (PIR1bits.SSPIF = 0);
+"366
+[; ;MCAL_Layer/I2C/hal_i2c.c: 366:         (PIR1bits.SSPIF = 0);
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"319
-[; ;MCAL_Layer/I2C/hal_i2c.c: 319:         (PIR2bits.BCLIF = 0);
+"367
+[; ;MCAL_Layer/I2C/hal_i2c.c: 367:         (PIR2bits.BCLIF = 0);
 [e = . . _PIR2bits 0 3 -> -> 0 `i `uc ]
-"320
-[; ;MCAL_Layer/I2C/hal_i2c.c: 320:         I2C_Report_Write_Collision_InterruptHandler = i2c_obj->I2C_Report_Write_Collision;
+"368
+[; ;MCAL_Layer/I2C/hal_i2c.c: 368:         I2C_Report_Write_Collision_InterruptHandler = i2c_obj->I2C_Report_Write_Collision;
 [e = _I2C_Report_Write_Collision_InterruptHandler . *U _i2c_obj 2 ]
-"321
-[; ;MCAL_Layer/I2C/hal_i2c.c: 321:         I2C_DefaultInterruptHandle = i2c_obj->I2C_DefaultInterruptHandler;
+"369
+[; ;MCAL_Layer/I2C/hal_i2c.c: 369:         I2C_DefaultInterruptHandle = i2c_obj->I2C_DefaultInterruptHandler;
 [e = _I2C_DefaultInterruptHandle . *U _i2c_obj 3 ]
-"322
-[; ;MCAL_Layer/I2C/hal_i2c.c: 322:         I2C_Report_Receive_Overflow_InterruptHandle = i2c_obj->I2C_Report_Receive_Overflow;
+"370
+[; ;MCAL_Layer/I2C/hal_i2c.c: 370:         I2C_Report_Receive_Overflow_InterruptHandle = i2c_obj->I2C_Report_Receive_Overflow;
 [e = _I2C_Report_Receive_Overflow_InterruptHandle . *U _i2c_obj 4 ]
-"350
-[; ;MCAL_Layer/I2C/hal_i2c.c: 350:         (INTCONbits.GIE = 1);
+"398
+[; ;MCAL_Layer/I2C/hal_i2c.c: 398:         (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"351
-[; ;MCAL_Layer/I2C/hal_i2c.c: 351:         (INTCONbits.PEIE = 1);
+"399
+[; ;MCAL_Layer/I2C/hal_i2c.c: 399:         (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"355
-[; ;MCAL_Layer/I2C/hal_i2c.c: 355: }
-[e :UE 373 ]
+"403
+[; ;MCAL_Layer/I2C/hal_i2c.c: 403: }
+[e :UE 384 ]
 }

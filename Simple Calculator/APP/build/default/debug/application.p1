@@ -3,7 +3,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42 ./application.h
 [; ;./application.h: 42: void application_initialize(void);
 [v _application_initialize `(v ~T0 @X0 0 ef ]
-"66 ./MCAL_Layer/I2C/../../MCAL_Layer/GPIO/hal_gpio.h
+"66 ./MCAL_Layer/SPI/../../MCAL_Layer/GPIO/hal_gpio.h
 [s S273 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S273 . port pin direction logic ]
 "45 ./ECU_Layer/Chr_LCD/ecu_chr_lcd.h
@@ -45,8 +45,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11
 [; ;application.c: 11: void calculate(void);
 [v _calculate `(v ~T0 @X0 0 ef ]
-"19 ./ECU_Layer/ecu_layer_init.h
-[; ;./ECU_Layer/ecu_layer_init.h: 19: void ecu_layer_init(void);
+"20 ./ECU_Layer/ecu_layer_init.h
+[; ;./ECU_Layer/ecu_layer_init.h: 20: void ecu_layer_init(void);
 [v _ecu_layer_init `(v ~T0 @X0 0 ef ]
 "61 ./ECU_Layer/Chr_LCD/ecu_chr_lcd.h
 [; ;./ECU_Layer/Chr_LCD/ecu_chr_lcd.h: 61: Std_ReturnType lcd_4bit_send_char_data_pos(const chr_lcd_4bit_t *lcd,uint8 row, uint8 column, uint8 data);
@@ -538,14 +538,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret ( _lcd_4bit_clear (1 -> &U _lcd_1 `*CS280 ]
 "31
 [; ;application.c: 31:     while(1){
-[e :U 304 ]
+[e :U 305 ]
 {
 "32
 [; ;application.c: 32:         ret = keypad_get_value(&keypad1, &keypad_value);
 [e = _ret ( _keypad_get_value (2 , -> &U _keypad1 `*CS279 &U _keypad_value ]
 "33
 [; ;application.c: 33:         if((0 && isdigit(keypad_value), ((unsigned)(keypad_value)-'0') < 10) && !num2_flag){
-[e $ ! && != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> _keypad_value `i -> 0 `i `i -> < - -> _keypad_value `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i ! != -> _num2_flag `i -> 0 `i 306  ]
+[e $ ! && != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> _keypad_value `i -> 0 `i `i -> < - -> _keypad_value `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i ! != -> _num2_flag `i -> 0 `i 307  ]
 {
 "34
 [; ;application.c: 34:             num1 = (num1*10)+(keypad_value-'0');
@@ -556,11 +556,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [; ;application.c: 36:         }
 }
-[e $U 307  ]
+[e $U 308  ]
 "37
 [; ;application.c: 37:         else if(('+' == keypad_value) || ('-' == keypad_value) || ('*' == keypad_value) || ('/' == keypad_value)){
-[e :U 306 ]
-[e $ ! || || || == -> 43 `ui -> _keypad_value `ui == -> 45 `ui -> _keypad_value `ui == -> 42 `ui -> _keypad_value `ui == -> 47 `ui -> _keypad_value `ui 308  ]
+[e :U 307 ]
+[e $ ! || || || == -> 43 `ui -> _keypad_value `ui == -> 45 `ui -> _keypad_value `ui == -> 42 `ui -> _keypad_value `ui == -> 47 `ui -> _keypad_value `ui 309  ]
 {
 "38
 [; ;application.c: 38:            operator = keypad_value;
@@ -574,11 +574,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;application.c: 41:         }
 }
-[e $U 309  ]
+[e $U 310  ]
 "42
 [; ;application.c: 42:         else if((0 && isdigit(keypad_value), ((unsigned)(keypad_value)-'0') < 10) && num2_flag){
-[e :U 308 ]
-[e $ ! && != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> _keypad_value `i -> 0 `i `i -> < - -> _keypad_value `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i != -> _num2_flag `i -> 0 `i 310  ]
+[e :U 309 ]
+[e $ ! && != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> _keypad_value `i -> 0 `i `i -> < - -> _keypad_value `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i != -> _num2_flag `i -> 0 `i 311  ]
 {
 "43
 [; ;application.c: 43:                num2 = (num2*10)+(keypad_value-'0');
@@ -589,11 +589,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45
 [; ;application.c: 45:         }
 }
-[e $U 311  ]
+[e $U 312  ]
 "46
 [; ;application.c: 46:         else if('=' == keypad_value){
-[e :U 310 ]
-[e $ ! == -> 61 `ui -> _keypad_value `ui 312  ]
+[e :U 311 ]
+[e $ ! == -> 61 `ui -> _keypad_value `ui 313  ]
 {
 "47
 [; ;application.c: 47:            lcd_write();
@@ -604,11 +604,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49
 [; ;application.c: 49:         }
 }
-[e $U 313  ]
+[e $U 314  ]
 "50
 [; ;application.c: 50:         else if('#' == keypad_value){
-[e :U 312 ]
-[e $ ! == -> 35 `ui -> _keypad_value `ui 314  ]
+[e :U 313 ]
+[e $ ! == -> 35 `ui -> _keypad_value `ui 315  ]
 {
 "51
 [; ;application.c: 51:            ret = lcd_4bit_clear(&lcd_1);
@@ -619,28 +619,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54
 [; ;application.c: 54:          }else{ }
 }
-[e $U 315  ]
-[e :U 314 ]
+[e $U 316  ]
+[e :U 315 ]
 {
 }
-[e :U 315 ]
-[e :U 313 ]
-[e :U 311 ]
-[e :U 309 ]
-[e :U 307 ]
+[e :U 316 ]
+[e :U 314 ]
+[e :U 312 ]
+[e :U 310 ]
+[e :U 308 ]
 "57
 [; ;application.c: 57:     }
 }
-[e :U 303 ]
-[e $U 304  ]
-[e :U 305 ]
+[e :U 304 ]
+[e $U 305  ]
+[e :U 306 ]
 "58
 [; ;application.c: 58:     return (0);
 [e ) -> 0 `i ]
-[e $UE 302  ]
+[e $UE 303  ]
 "59
 [; ;application.c: 59: }
-[e :UE 302 ]
+[e :UE 303 ]
 }
 "61
 [; ;application.c: 61: void application_initialize(void){
@@ -657,7 +657,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _ecu_layer_init ..  ]
 "64
 [; ;application.c: 64: }
-[e :UE 316 ]
+[e :UE 317 ]
 }
 "66
 [; ;application.c: 66: void loading_screen(void){
@@ -680,9 +680,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;application.c: 70:     for(counter=8; counter<=15*2; ++counter){
 {
 [e = _counter -> -> 8 `i `uc ]
-[e $ <= -> _counter `i * -> 15 `i -> 2 `i 318  ]
-[e $U 319  ]
-[e :U 318 ]
+[e $ <= -> _counter `i * -> 15 `i -> 2 `i 319  ]
+[e $U 320  ]
+[e :U 319 ]
 {
 "71
 [; ;application.c: 71:         l_lcd1_counter++;
@@ -695,7 +695,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "74
 [; ;application.c: 74:         if(7 == l_lcd1_counter ){
-[e $ ! == -> 7 `i -> _l_lcd1_counter `i 321  ]
+[e $ ! == -> 7 `i -> _l_lcd1_counter `i 322  ]
 {
 "75
 [; ;application.c: 75:             lcd_4bit_send_string_pos(&lcd_1, 1, 8, "         ");
@@ -706,24 +706,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "77
 [; ;application.c: 77:         }else{ }
 }
-[e $U 322  ]
-[e :U 321 ]
+[e $U 323  ]
+[e :U 322 ]
 {
 }
-[e :U 322 ]
+[e :U 323 ]
 "78
 [; ;application.c: 78:     }
 }
 [e =+ _counter -> -> 1 `i `uc ]
-[e $ <= -> _counter `i * -> 15 `i -> 2 `i 318  ]
-[e :U 319 ]
+[e $ <= -> _counter `i * -> 15 `i -> 2 `i 319  ]
+[e :U 320 ]
 }
 "79
 [; ;application.c: 79:     lcd_4bit_send_string_pos(&lcd_1, 1, 8, "         ");
 [e ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 1 `i `uc -> -> 8 `i `uc :s 4C ]
 "80
 [; ;application.c: 80: }
-[e :UE 317 ]
+[e :UE 318 ]
 }
 "82
 [; ;application.c: 82: void lcd_write(void){
@@ -741,7 +741,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _not_pressed -> -> 0 `ui `uc ]
 "85
 [; ;application.c: 85:     if(not_pressed != keypad_value){
-[e $ ! != -> _not_pressed `i -> _keypad_value `i 324  ]
+[e $ ! != -> _not_pressed `i -> _keypad_value `i 325  ]
 {
 "86
 [; ;application.c: 86:         ret = lcd_4bit_send_char_data(&lcd_1, keypad_value);
@@ -755,14 +755,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "89
 [; ;application.c: 89:     }else{ }
 }
-[e $U 325  ]
-[e :U 324 ]
+[e $U 326  ]
+[e :U 325 ]
 {
 }
-[e :U 325 ]
+[e :U 326 ]
 "90
 [; ;application.c: 90: }
-[e :UE 323 ]
+[e :UE 324 ]
 }
 "92
 [; ;application.c: 92: void calculate(void){
@@ -776,41 +776,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret -> -> 0 `i `uc ]
 "94
 [; ;application.c: 94:     switch(operator){
-[e $U 328  ]
+[e $U 329  ]
 {
 "95
 [; ;application.c: 95:         case '+' : result = num1 + num2; break;
-[e :U 329 ]
+[e :U 330 ]
 [e = _result + _num1 _num2 ]
-[e $U 327  ]
+[e $U 328  ]
 "96
 [; ;application.c: 96:         case '-' : result = num1 - num2; break;
-[e :U 330 ]
+[e :U 331 ]
 [e = _result - _num1 _num2 ]
-[e $U 327  ]
+[e $U 328  ]
 "97
 [; ;application.c: 97:         case '*' : result = num1 * num2; break;
-[e :U 331 ]
+[e :U 332 ]
 [e = _result * _num1 _num2 ]
-[e $U 327  ]
+[e $U 328  ]
 "98
 [; ;application.c: 98:         case '/' :
-[e :U 332 ]
+[e :U 333 ]
 "99
 [; ;application.c: 99:             if(0 == num2){
-[e $ ! == -> -> -> 0 `i `l `ul _num2 333  ]
+[e $ ! == -> -> -> 0 `i `l `ul _num2 334  ]
 {
 "100
 [; ;application.c: 100:                 ret = lcd_4bit_send_string_pos(&lcd_1, 4, 1, "CAN`T DIVIDE BY ZERO");
 [e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 1 `i `uc :s 5C ]
 "101
 [; ;application.c: 101:                 return ;
-[e $UE 326  ]
+[e $UE 327  ]
 "102
 [; ;application.c: 102:             }else{
 }
-[e $U 334  ]
-[e :U 333 ]
+[e $U 335  ]
+[e :U 334 ]
 {
 "103
 [; ;application.c: 103:             result = num1 / num2;
@@ -818,24 +818,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;application.c: 104:             }
 }
-[e :U 334 ]
+[e :U 335 ]
 "105
 [; ;application.c: 105:             break;
-[e $U 327  ]
+[e $U 328  ]
 "106
 [; ;application.c: 106:         default : ;
-[e :U 335 ]
+[e :U 336 ]
 "107
 [; ;application.c: 107:     }
 }
-[e $U 327  ]
+[e $U 328  ]
+[e :U 329 ]
+[e [\ -> _operator `i , $ -> -> 43 `ui `i 330
+ , $ -> -> 45 `ui `i 331
+ , $ -> -> 42 `ui `i 332
+ , $ -> -> 47 `ui `i 333
+ 336 ]
 [e :U 328 ]
-[e [\ -> _operator `i , $ -> -> 43 `ui `i 329
- , $ -> -> 45 `ui `i 330
- , $ -> -> 42 `ui `i 331
- , $ -> -> 47 `ui `i 332
- 335 ]
-[e :U 327 ]
 "108
 [; ;application.c: 108:     ret = convert_uint32_to_string(result, result_txt);
 [e = _ret ( _convert_uint32_to_string (2 , _result &U _result_txt ]
@@ -844,7 +844,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ret ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd_1 `*CS280 -> -> 4 `i `uc -> -> 15 `i `uc &U _result_txt ]
 "110
 [; ;application.c: 110: }
-[e :UE 326 ]
+[e :UE 327 ]
 }
 [a 2C 76 111 97 100 105 110 103 0 ]
 [a 5C 67 65 78 96 84 32 68 73 86 73 68 69 32 66 89 32 90 69 82 79 0 ]
