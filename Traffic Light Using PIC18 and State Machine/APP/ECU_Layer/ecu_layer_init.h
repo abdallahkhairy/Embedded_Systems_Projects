@@ -15,6 +15,7 @@
 #include "button/ecu_button.h"
 #include "KeyPad/ecu_keypad.h"
 #include "Chr_LCD/ecu_chr_lcd.h"
+#include "RealTimeClockDS1307/RealTimeClockDS1307.h"
 
 void ecu_layer_init(void);
 

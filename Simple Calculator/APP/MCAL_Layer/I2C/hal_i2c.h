@@ -12,6 +12,7 @@
 #include "pic18f4620.h"
 #include "../mcal_std_types.h"
 #include "../../MCAL_Layer/GPIO/hal_gpio.h"
+#include "../../MCAL_Layer/usart/hal_usart.h"
 #include "../../MCAL_Layer/Interrupt/mcal_internal_interrupt.h"
 
 /* ----------------- Macro Declarations -----------------*/
@@ -112,5 +113,8 @@ Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ac
 
 Std_ReturnType MSSP_I2C_Master_Write_NBlocking(const mssp_i2c_t *i2c_obj, uint8 i2c_data, uint8 *_ack);
 Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data);
+
+Std_ReturnType MSSP_I2C_EXT_Device_Write_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 _data, uint8 *slave_ack);
+Std_ReturnType MSSP_I2C_EXT_Device_Read_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 *_data, uint8 *slave_ack);
 
 #endif	/* HAL_I2C_H */

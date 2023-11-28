@@ -244,7 +244,7 @@ Std_ReturnType MSSP_I2C_Master_Read_Blocking(const mssp_i2c_t *i2c_obj, uint8 ac
 }
 
 Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 ack, uint8 *i2c_data){
-     Std_ReturnType ret = E_OK;
+    Std_ReturnType ret = E_OK;
     if((NULL == i2c_obj) || (NULL == i2c_data)){
         ret = E_NOT_OK;
     }
@@ -276,6 +276,54 @@ Std_ReturnType MSSP_I2C_Master_Read_NBlocking(const mssp_i2c_t *i2c_obj, uint8 a
         
     }
     return ret;
+}
+/**
+ * 
+ * @param i2c_obj
+ * @param slave_add
+ * @param byte_address
+ * @param _data
+ * @param slave_ack
+ * @return 
+ */
+Std_ReturnType MSSP_I2C_EXT_Device_Write_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 _data, uint8 *slave_ack){
+    Std_ReturnType ret = E_NOT_OK;
+    if((NULL == i2c_obj) || (NULL == slave_ack)){
+        ret = E_NOT_OK;
+    }
+    else{
+        ret = MSSP_I2C_Master_Send_Start(&i2c_obj);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, slave_add, &slave_ack);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, byte_address, &slave_ack);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, _data, &slave_ack);
+        ret = MSSP_I2C_Master_Send_Stop(&i2c_obj);
+        __delay_ms(1);
+    }
+}
+/**
+ * 
+ * @param i2c_obj
+ * @param slave_add
+ * @param byte_address
+ * @param _data
+ * @param slave_ack
+ * @return 
+ */
+Std_ReturnType MSSP_I2C_EXT_Device_Read_1_Byte(const mssp_i2c_t *i2c_obj, uint8 slave_add, uint8 byte_address, uint8 *_data, uint8 *slave_ack){
+    Std_ReturnType ret = E_OK;
+    if((NULL == i2c_obj) || (NULL == _data) || (NULL == slave_ack)){
+        ret = E_NOT_OK;
+    }
+    else{
+        ret = MSSP_I2C_Master_Send_Start(&i2c_obj);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, slave_add, &slave_ack);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, byte_address, &slave_ack);
+        ret = MSSP_I2C_Master_Send_Repeated_Start(&i2c_obj);
+        ret = MSSP_I2C_Master_Write_Blocking(&i2c_obj, (slave_add | 0x01 ), &slave_ack);
+        ret = MSSP_I2C_Master_Read_Blocking(&i2c_obj, I2C_MASTER_SEND_NACK, _data);
+        ret = MSSP_I2C_Master_Send_Stop(&i2c_obj);
+        __delay_ms(1);
+    }
 }
 
 void MSSP_I2C_ISR(void){

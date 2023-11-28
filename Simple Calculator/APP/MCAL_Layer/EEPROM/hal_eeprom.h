@@ -37,4 +37,6 @@
 Std_ReturnType Data_EEPROM_WriteByte(uint16 bAdd, uint8 bData);
 Std_ReturnType Data_EEPROM_ReadByte(uint16 bAdd, uint8 *bData);
 
+
+
 #endif	/* HAL_EEPROM_H */
