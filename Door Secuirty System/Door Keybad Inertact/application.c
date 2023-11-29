@@ -76,7 +76,7 @@ int main() {
                 ret = lcd_4bit_clear(&lcd_1);
                 display = 0;
             break;
-                case 3:
+            case 3:
                 dirct_confirm_flag =0;
                 enter_new_password();
                 dirct_confirm_flag =1;
