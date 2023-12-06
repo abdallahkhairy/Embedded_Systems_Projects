@@ -2,7 +2,7 @@
 Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MCAL, ECUAL Layers)
 
 ## Smart Home
-<img width="1000" alt="Door Secuirty System" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/43ea532b-4187-4d8a-b9b7-2e8c37288a39">
+<img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/3fc15518-bab4-40c3-a3d0-94aa7d82a65d">
 
 ## Door Secuirty System
 <img width="1000" alt="Door Secuirty System" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/a5c5c659-f324-482c-b905-f6bc966a6569">
