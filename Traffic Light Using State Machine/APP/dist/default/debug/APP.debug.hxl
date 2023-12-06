@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o
+ C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o
  -Odist/default/debug\APP.debug.hex
  -logfile=dist/default/debug\APP.debug.hxl
  -addressing=1
@@ -9,14 +9,14 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  8h - 11h		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  1000h - 10B4h		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  10B6h - 2B8Ch		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  2B8Eh - 2F6Ah		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  2F6Ch - 2FA9h		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  200000h - 200007h		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  8h - 11h		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  1000h - 10B4h		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  10B6h - 2B8Ch		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  2B8Eh - 2F6Ah		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  2F6Ch - 2FA9h		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  200000h - 200007h		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   12h - FFFh
@@ -29,7 +29,7 @@
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\user\AppData\Local\Temp\xcAsru8.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\user\AppData\Local\Temp\xcAsv88.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Wed Dec 06 09:42:06 2023
+                                                                                               Wed Dec 06 13:39:09 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	18F4620
@@ -4604,7 +4604,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4374                           
   4375 ;; *************** function _TimeOfPedestriansMoveFinishedHandler *****************
   4376 ;; Defined at:
-  4377 ;;		line 176 in file "application.c"
+  4377 ;;		line 178 in file "application.c"
   4378 ;; Parameters:    Size  Location     Type
   4379 ;;		None
   4380 ;; Auto vars:     Size  Location     Type
@@ -4645,7 +4645,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4410   001E96                     _TimeOfPedestriansMoveFinishedHandler:
   4411                           	callstack 18
   4412   001E96                     
-  4413                           ;application.c: 178:     ret = led_turn_on(&led_yellow_people);
+  4413                           ;application.c: 180:     ret = led_turn_on(&led_yellow_people);
   4414   001E96  0E5B               	movlw	low _led_yellow_people
   4415   001E98  0100               	movlb	0	; () banked
   4416   001E9A  6FEF               	movwf	led_turn_on@led& (0+255),b
@@ -4655,7 +4655,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4420   001EA4  0100               	movlb	0	; () banked
   4421   001EA6  6FFF               	movwf	_ret& (0+255),b
   4422                           
-  4423                           ;application.c: 179:     ret = led_turn_off(&led_green_people);
+  4423                           ;application.c: 181:     ret = led_turn_off(&led_green_people);
   4424   001EA8  0E5D               	movlw	low _led_green_people
   4425   001EAA  6FEF               	movwf	led_turn_off@led& (0+255),b
   4426   001EAC  0E00               	movlw	high _led_green_people
@@ -4665,7 +4665,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4430   001EB6  6FFF               	movwf	_ret& (0+255),b
   4431   001EB8                     
   4432                           ; BSR set to: 0
-  4433                           ;application.c: 180:     ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1,"Pedestrians be ");
+  4433                           ;application.c: 183:     ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1,"Pedestrians be ");
   4434   001EB8  0EC1               	movlw	low _lcd_1
   4435   001EBA  0101               	movlb	1	; () banked
   4436   001EBC  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4684,7 +4684,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4449   001ED8  6FFF               	movwf	_ret& (0+255),b
   4450   001EDA                     
   4451                           ; BSR set to: 0
-  4452                           ;application.c: 181:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Ready to STOP!!");
+  4452                           ;application.c: 184:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Ready to STOP!!");
   4453   001EDA  0EC1               	movlw	low _lcd_1
   4454   001EDC  0101               	movlb	1	; () banked
   4455   001EDE  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4703,7 +4703,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4468   001EFA  6FFF               	movwf	_ret& (0+255),b
   4469   001EFC                     
   4470                           ; BSR set to: 0
-  4471                           ;application.c: 182:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Cars be Ready ");
+  4471                           ;application.c: 185:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Cars be Ready ");
   4472   001EFC  0EC1               	movlw	low _lcd_1
   4473   001EFE  0101               	movlb	1	; () banked
   4474   001F00  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4722,7 +4722,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4487   001F1C  6FFF               	movwf	_ret& (0+255),b
   4488   001F1E                     
   4489                           ; BSR set to: 0
-  4490                           ;application.c: 183:     ret = lcd_4bit_send_string_pos(&lcd_1, 4, 1,"To MOVE =>=>");
+  4490                           ;application.c: 186:     ret = lcd_4bit_send_string_pos(&lcd_1, 4, 1,"To MOVE =>=>");
   4491   001F1E  0EC1               	movlw	low _lcd_1
   4492   001F20  0101               	movlb	1	; () banked
   4493   001F22  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4741,7 +4741,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4506   001F3E  6FFF               	movwf	_ret& (0+255),b
   4507   001F40                     
   4508                           ; BSR set to: 0
-  4509                           ;application.c: 185:     return PEDESTRIANS_READY_TO_STOP_CARS_STOP_STATE;
+  4509                           ;application.c: 188:     return PEDESTRIANS_READY_TO_STOP_CARS_STOP_STATE;
   4510   001F40  0E03               	movlw	3
   4511   001F42                     
   4512                           ; BSR set to: 0
@@ -4812,7 +4812,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4572   001F64  6FFF               	movwf	_ret& (0+255),b
   4573   001F66                     
   4574                           ; BSR set to: 0
-  4575                           ;application.c: 159:     ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1,"Cars be ");
+  4575                           ;application.c: 160:     ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1,"Cars be ");
   4576   001F66  0EC1               	movlw	low _lcd_1
   4577   001F68  0101               	movlb	1	; () banked
   4578   001F6A  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4831,7 +4831,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4591   001F86  6FFF               	movwf	_ret& (0+255),b
   4592   001F88                     
   4593                           ; BSR set to: 0
-  4594                           ;application.c: 160:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Ready to STOP!!");
+  4594                           ;application.c: 161:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Ready to STOP!!");
   4595   001F88  0EC1               	movlw	low _lcd_1
   4596   001F8A  0101               	movlb	1	; () banked
   4597   001F8C  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4850,7 +4850,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4610   001FA8  6FFF               	movwf	_ret& (0+255),b
   4611   001FAA                     
   4612                           ; BSR set to: 0
-  4613                           ;application.c: 161:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Pedestrians be Rea
+  4613                           ;application.c: 162:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Pedestrians be Rea
       +                          dy ");
   4614   001FAA  0EC1               	movlw	low _lcd_1
   4615   001FAC  0101               	movlb	1	; () banked
@@ -4870,7 +4870,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4629   001FCA  6FFF               	movwf	_ret& (0+255),b
   4630   001FCC                     
   4631                           ; BSR set to: 0
-  4632                           ;application.c: 162:     ret = lcd_4bit_send_string_pos(&lcd_1, 4, 1,"To MOVE =>=>");
+  4632                           ;application.c: 163:     ret = lcd_4bit_send_string_pos(&lcd_1, 4, 1,"To MOVE =>=>");
   4633   001FCC  0EC1               	movlw	low _lcd_1
   4634   001FCE  0101               	movlb	1	; () banked
   4635   001FD0  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4889,7 +4889,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4648   001FEC  6FFF               	movwf	_ret& (0+255),b
   4649   001FEE                     
   4650                           ; BSR set to: 0
-  4651                           ;application.c: 164:     return CARS_READY_TO_STOP_PEDESTRIANS_STOP_STATE;
+  4651                           ;application.c: 165:     return CARS_READY_TO_STOP_PEDESTRIANS_STOP_STATE;
   4652   001FEE  0E01               	movlw	1
   4653   001FF0                     
   4654                           ; BSR set to: 0
@@ -4899,7 +4899,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4658                           
   4659 ;; *************** function _ReadyTimeOfPedestriansToStopFinishedHandler *****************
   4660 ;; Defined at:
-  4661 ;;		line 188 in file "application.c"
+  4661 ;;		line 191 in file "application.c"
   4662 ;; Parameters:    Size  Location     Type
   4663 ;;		None
   4664 ;; Auto vars:     Size  Location     Type
@@ -4940,7 +4940,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4694   00227A                     _ReadyTimeOfPedestriansToStopFinishedHandler:
   4695                           	callstack 18
   4696   00227A                     
-  4697                           ;application.c: 189:     ret = led_turn_on(&led_green_car);
+  4697                           ;application.c: 192:     ret = led_turn_on(&led_green_car);
   4698   00227A  0E5E               	movlw	low _led_green_car
   4699   00227C  0100               	movlb	0	; () banked
   4700   00227E  6FEF               	movwf	led_turn_on@led& (0+255),b
@@ -4950,7 +4950,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4704   002288  0100               	movlb	0	; () banked
   4705   00228A  6FFF               	movwf	_ret& (0+255),b
   4706                           
-  4707                           ;application.c: 190:     ret = led_turn_on(&led_red_people);
+  4707                           ;application.c: 193:     ret = led_turn_on(&led_red_people);
   4708   00228C  0E2C               	movlw	low _led_red_people
   4709   00228E  6FEF               	movwf	led_turn_on@led& (0+255),b
   4710   002290  0E00               	movlw	high _led_red_people
@@ -4959,7 +4959,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4713   002298  0100               	movlb	0	; () banked
   4714   00229A  6FFF               	movwf	_ret& (0+255),b
   4715                           
-  4716                           ;application.c: 191:     ret = led_turn_off(&led_yellow_people);
+  4716                           ;application.c: 194:     ret = led_turn_off(&led_yellow_people);
   4717   00229C  0E5B               	movlw	low _led_yellow_people
   4718   00229E  6FEF               	movwf	led_turn_off@led& (0+255),b
   4719   0022A0  0E00               	movlw	high _led_yellow_people
@@ -4968,7 +4968,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4722   0022A8  0100               	movlb	0	; () banked
   4723   0022AA  6FFF               	movwf	_ret& (0+255),b
   4724                           
-  4725                           ;application.c: 192:     ret = led_turn_off(&led_red_car);
+  4725                           ;application.c: 195:     ret = led_turn_off(&led_red_car);
   4726   0022AC  0E5F               	movlw	low _led_red_car
   4727   0022AE  6FEF               	movwf	led_turn_off@led& (0+255),b
   4728   0022B0  0E00               	movlw	high _led_red_car
@@ -4978,7 +4978,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4732   0022BA  6FFF               	movwf	_ret& (0+255),b
   4733   0022BC                     
   4734                           ; BSR set to: 0
-  4735                           ;application.c: 193:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Cars MOVE =>=>");
+  4735                           ;application.c: 197:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Cars MOVE =>=>");
   4736   0022BC  0EC1               	movlw	low _lcd_1
   4737   0022BE  0101               	movlb	1	; () banked
   4738   0022C0  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -4997,7 +4997,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4751   0022DC  6FFF               	movwf	_ret& (0+255),b
   4752   0022DE                     
   4753                           ; BSR set to: 0
-  4754                           ;application.c: 194:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Pedestrians STOP!!
+  4754                           ;application.c: 198:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Pedestrians STOP!!
       +                           ");
   4755   0022DE  0EC1               	movlw	low _lcd_1
   4756   0022E0  0101               	movlb	1	; () banked
@@ -5017,7 +5017,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4770   0022FE  6FFF               	movwf	_ret& (0+255),b
   4771   002300                     
   4772                           ; BSR set to: 0
-  4773                           ;application.c: 196:     return CARS_MOVE_PEDESTRIANS_STOP_STATE;
+  4773                           ;application.c: 200:     return CARS_MOVE_PEDESTRIANS_STOP_STATE;
   4774   002300  0E00               	movlw	0
   4775   002302                     
   4776                           ; BSR set to: 0
@@ -5027,7 +5027,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4780                           
   4781 ;; *************** function _ReadyTimeOfCarsToStopFinishedHandler *****************
   4782 ;; Defined at:
-  4783 ;;		line 166 in file "application.c"
+  4783 ;;		line 167 in file "application.c"
   4784 ;; Parameters:    Size  Location     Type
   4785 ;;		None
   4786 ;; Auto vars:     Size  Location     Type
@@ -5068,7 +5068,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4816   002304                     _ReadyTimeOfCarsToStopFinishedHandler:
   4817                           	callstack 18
   4818   002304                     
-  4819                           ;application.c: 167:     ret = led_turn_on(&led_green_people);
+  4819                           ;application.c: 168:     ret = led_turn_on(&led_green_people);
   4820   002304  0E5D               	movlw	low _led_green_people
   4821   002306  0100               	movlb	0	; () banked
   4822   002308  6FEF               	movwf	led_turn_on@led& (0+255),b
@@ -5078,7 +5078,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4826   002312  0100               	movlb	0	; () banked
   4827   002314  6FFF               	movwf	_ret& (0+255),b
   4828                           
-  4829                           ;application.c: 168:     ret = led_turn_on(&led_red_car);
+  4829                           ;application.c: 169:     ret = led_turn_on(&led_red_car);
   4830   002316  0E5F               	movlw	low _led_red_car
   4831   002318  6FEF               	movwf	led_turn_on@led& (0+255),b
   4832   00231A  0E00               	movlw	high _led_red_car
@@ -5087,7 +5087,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4835   002322  0100               	movlb	0	; () banked
   4836   002324  6FFF               	movwf	_ret& (0+255),b
   4837                           
-  4838                           ;application.c: 169:     ret = led_turn_off(&led_yellow_car);
+  4838                           ;application.c: 170:     ret = led_turn_off(&led_yellow_car);
   4839   002326  0E5C               	movlw	low _led_yellow_car
   4840   002328  6FEF               	movwf	led_turn_off@led& (0+255),b
   4841   00232A  0E00               	movlw	high _led_yellow_car
@@ -5096,7 +5096,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4844   002332  0100               	movlb	0	; () banked
   4845   002334  6FFF               	movwf	_ret& (0+255),b
   4846                           
-  4847                           ;application.c: 170:     ret = led_turn_off(&led_red_people);
+  4847                           ;application.c: 171:     ret = led_turn_off(&led_red_people);
   4848   002336  0E2C               	movlw	low _led_red_people
   4849   002338  6FEF               	movwf	led_turn_off@led& (0+255),b
   4850   00233A  0E00               	movlw	high _led_red_people
@@ -5106,7 +5106,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4854   002344  6FFF               	movwf	_ret& (0+255),b
   4855   002346                     
   4856                           ; BSR set to: 0
-  4857                           ;application.c: 171:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Pedestrian MOVE =>
+  4857                           ;application.c: 173:     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Pedestrian MOVE =>
       +                          =>");
   4858   002346  0EC1               	movlw	low _lcd_1
   4859   002348  0101               	movlb	1	; () banked
@@ -5126,7 +5126,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4873   002366  6FFF               	movwf	_ret& (0+255),b
   4874   002368                     
   4875                           ; BSR set to: 0
-  4876                           ;application.c: 172:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Cars STOP!! ");
+  4876                           ;application.c: 174:     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Cars STOP!! ");
   4877   002368  0EC1               	movlw	low _lcd_1
   4878   00236A  0101               	movlb	1	; () banked
   4879   00236C  6F00               	movwf	lcd_4bit_send_string_pos@lcd& (0+255),b
@@ -5145,7 +5145,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4892   002388  6FFF               	movwf	_ret& (0+255),b
   4893   00238A                     
   4894                           ; BSR set to: 0
-  4895                           ;application.c: 174:     return PEDESTRIAN_MOVE_CARS_STOP_STATE;
+  4895                           ;application.c: 176:     return PEDESTRIAN_MOVE_CARS_STOP_STATE;
   4896   00238A  0E02               	movlw	2
   4897   00238C                     
   4898                           ; BSR set to: 0
@@ -10350,7 +10350,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Wed Dec 06 09:42:06 2023
+Symbol Table                                                                                   Wed Dec 06 13:39:09 2023
 
                                  ??_InterruptManager 0044                                                    l9 29B4  
                                      _led_red_people 002C                                      ?_lcd_send_4bits 00EF  

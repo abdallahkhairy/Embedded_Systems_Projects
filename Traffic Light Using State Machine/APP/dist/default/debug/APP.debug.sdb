@@ -348,11 +348,11 @@ SEGMENT_COMMON_CATHODE 1
 [v _Int0_APP_ISR Int0_APP_ISR `(v  1 e 1 0 ]
 "156
 [v _TimeOfCarsMoveFinishedHandler TimeOfCarsMoveFinishedHandler `(E4102  1 e 1 0 ]
-"166
+"167
 [v _ReadyTimeOfCarsToStopFinishedHandler ReadyTimeOfCarsToStopFinishedHandler `(E4102  1 e 1 0 ]
-"176
+"178
 [v _TimeOfPedestriansMoveFinishedHandler TimeOfPedestriansMoveFinishedHandler `(E4102  1 e 1 0 ]
-"188
+"191
 [v _ReadyTimeOfPedestriansToStopFinishedHandler ReadyTimeOfPedestriansToStopFinishedHandler `(E4102  1 e 1 0 ]
 "7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -1621,25 +1621,25 @@ SEGMENT_COMMON_CATHODE 1
 [v ___awdiv@divisor divisor `i  1 p 2 32 ]
 "41
 } 0
-"176 D:\Embedded\Git Projects\Traffic Light Using State Machine\APP\application.c
+"178 D:\Embedded\Git Projects\Traffic Light Using State Machine\APP\application.c
 [v _TimeOfPedestriansMoveFinishedHandler TimeOfPedestriansMoveFinishedHandler `(E4102  1 e 1 0 ]
 {
-"186
+"189
 } 0
 "156
 [v _TimeOfCarsMoveFinishedHandler TimeOfCarsMoveFinishedHandler `(E4102  1 e 1 0 ]
 {
-"165
+"166
 } 0
-"188
+"191
 [v _ReadyTimeOfPedestriansToStopFinishedHandler ReadyTimeOfPedestriansToStopFinishedHandler `(E4102  1 e 1 0 ]
 {
-"197
+"201
 } 0
-"166
+"167
 [v _ReadyTimeOfCarsToStopFinishedHandler ReadyTimeOfCarsToStopFinishedHandler `(E4102  1 e 1 0 ]
 {
-"175
+"177
 } 0
 "36 D:\Embedded\Git Projects\Traffic Light Using State Machine\APP\ECU_Layer/LED/ecu_led.c
 [v _led_turn_on led_turn_on `(uc  1 e 1 0 ]

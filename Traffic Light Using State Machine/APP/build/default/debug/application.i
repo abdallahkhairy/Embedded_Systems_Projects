@@ -6003,6 +6003,7 @@ void Int0_APP_ISR(void) {
 traffic_light_state_t TimeOfCarsMoveFinishedHandler(void){
     ret = led_turn_on(&led_yellow_car);
     ret = led_turn_off(&led_green_car);
+
     ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1,"Cars be ");
     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Ready to STOP!!");
     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Pedestrians be Ready ");
@@ -6015,6 +6016,7 @@ traffic_light_state_t ReadyTimeOfCarsToStopFinishedHandler(void){
     ret = led_turn_on(&led_red_car);
     ret = led_turn_off(&led_yellow_car);
     ret = led_turn_off(&led_red_people);
+
     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Pedestrian MOVE =>=>");
     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Cars STOP!! ");
 
@@ -6024,6 +6026,7 @@ traffic_light_state_t TimeOfPedestriansMoveFinishedHandler(void){
 
     ret = led_turn_on(&led_yellow_people);
     ret = led_turn_off(&led_green_people);
+
     ret = lcd_4bit_send_string_pos(&lcd_1, 1, 1,"Pedestrians be ");
     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Ready to STOP!!");
     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Cars be Ready ");
@@ -6037,6 +6040,7 @@ traffic_light_state_t ReadyTimeOfPedestriansToStopFinishedHandler(void){
     ret = led_turn_on(&led_red_people);
     ret = led_turn_off(&led_yellow_people);
     ret = led_turn_off(&led_red_car);
+
     ret = lcd_4bit_send_string_pos(&lcd_1, 2, 1,"Cars MOVE =>=>");
     ret = lcd_4bit_send_string_pos(&lcd_1, 3, 1,"Pedestrians STOP!! ");
 
