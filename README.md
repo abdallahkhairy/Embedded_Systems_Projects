@@ -2,7 +2,7 @@
 Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MCAL, ECUAL Layers)
 
 ## Smart Home
-<img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/0e34d4c6-13d3-4eec-9aaa-7ee33857a8fb">
+<img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/3bfa3ed9-dd7b-4d41-ba7a-8d86afeb69db">
 
 ## Door Secuirty System
 <img width="1000" alt="Door Secuirty System" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/cebf7794-d856-4665-85cb-ab7874f3b3b7">
@@ -14,7 +14,7 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 <img width="1000" alt="State Machine" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/33b9b212-58a2-4c32-aff4-387e5c5bf659">
 
 ## Fan Control System Using PWM
-<img width="1000" alt="Fan Control" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/cb9284b3-912c-4fb1-855a-498237e6ed5e">
+<img width="1000" alt="Fan Control" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/b434c562-5de6-4f1d-9776-afad37d06565">
 
 ## Simple Calcultor
 <img width="1000" alt="Calculator" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/175f3e22-6fe0-44d9-a6b3-6ea3a3dc2326">
