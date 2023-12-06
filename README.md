@@ -5,7 +5,7 @@ Projects On embedded Systems Using Layer Based Embedded Software Design (HAL, MC
 <img width="1000" alt="Smart Home" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/08c70a31-4d81-49b7-8eff-a029d0738310">
 
 ## Door Secuirty System
-<img width="1000" alt="Door Secuirty System" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/a5c5c659-f324-482c-b905-f6bc966a6569">
+<img width="1000" alt="Door Secuirty System" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/9e34818c-1ca5-44b1-9d4e-20ee4a137c15">
 
 ## Traffic Light System with State Machine
 <img width="1000" alt="Traffic Light" src="https://github.com/abdallahkhairy/Embedded_Systems_Projects/assets/36454981/b246f67a-32ff-472d-8a13-3f83f750b3a1">
